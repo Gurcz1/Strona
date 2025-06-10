@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jakub – O mnie</title>
 
-  <!-- Font Awesome 6.5 – ikony -->
+  <!-- Font Awesome do ikon (CDN) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,20 +13,21 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-
+  <!-- Główne style -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- WARSTWY TŁA (musi być w HTML!) -->
+  <!-- WARSTWY TŁA -->
   <div class="background"></div>
   <div class="grid-overlay"></div>
 
-  <!-- TREŚĆ -->
-  <div class="content">
-    <div class="text-left">
+  <!-- WŁAŚCIWA TREŚĆ -->
+  <div class="wrapper">
+    <!-- blok tekstu -->
+    <div class="text-block">
       <h1 class="tagline">Curious growth-driven athlete-scholar</h1>
 
-      <!-- H2 było niewidoczne, bo biały napis na białym tle -->
       <h2>
         Hi, I'm Jakub –<br />
         versatile and<br />
@@ -42,13 +43,13 @@
       </p>
     </div>
 
-    <!-- IKONY -->
+    <!-- kolumna z ikonami -->
     <div class="social-right">
       <a class="social-btn" href="https://github.com/" aria-label="GitHub">
         <i class="fa-brands fa-github"></i>
       </a>
       <a class="social-btn" href="https://twitter.com/" aria-label="Twitter / X">
-        <i class="fa-brands fa-x-twitter"></i>      <!-- Jeśli nie działa, zmień na fa-twitter -->
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a class="social-btn" href="https://instagram.com/" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>

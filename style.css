@@ -1,63 +1,52 @@
-/* 1. Reset + podstawy */
-html,
-body {
+/* RESET / PODSTAWY */
+html, body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
 }
 
-/* 2. Warstwa zdjęcia w tle */
-.background,
-.grid-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* żeby kliknięcia przechodziły na treść */
-  z-index: -2;
-}
+/* ---------- TŁO I SIATKA ---------- */
 
-/* zdjęcie */
+/* zdjęcie w tle */
 .background {
-  background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80");
+  position: fixed;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1516637090014-cb1ab78511f5?auto=format&fit=crop&w=2000&q=80");
+  /* ❗ jeśli wolisz podany przez Ciebie link, wklej WERSJĘ RAW: */
+  /* background-image: url("https://images.unsplash.com/photo-1708434336699-cecf9672f7c6?auto=format&fit=crop&w=2000&q=80"); */
   background-size: cover;
   background-position: center;
   filter: brightness(0.5);
+  z-index: -2;
 }
 
-/* cienka siatka */
 .grid-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
   z-index: -1;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.07) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(to right,  rgba(255,255,255,0.07) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* 3. Układ treści */
+/* ---------- TREŚĆ ---------- */
 .content {
   display: flex;
-  flex-direction: row;
   align-items: center;
   height: 100%;
   padding: 40px;
   gap: 40px;
 }
 
-/* lewa kolumna */
-.text-left {
-  max-width: 600px;
-}
+.text-left { max-width: 600px; }
 
 .tagline {
   font-size: 14px;
-  color: #00aaff;
   text-transform: uppercase;
+  color: #00aaff;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 0;
@@ -77,7 +66,7 @@ body {
   line-height: 1.6;
 }
 
-/* prawa kolumna */
+/* ---------- IKONY ---------- */
 .social-right {
   margin-left: auto;
   display: flex;
@@ -89,35 +78,25 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background: #fff;
   color: #00aaff;
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  margin-bottom: 20px;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform .2s, box-shadow .2s;
 }
-
 .social-btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
 }
 
-/* 4. Responsywność */
+/* ---------- RESPONSYWNOŚĆ ---------- */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
-  .social-right {
-    flex-direction: row;
-    margin: 30px 0 0;
-  }
-  .social-btn {
-    margin: 0 10px;
-  }
+  .content { flex-direction: column; text-align: center; }
+  .social-right { flex-direction: row; margin-top: 30px; }
+  .social-btn { margin: 0 10px; }
 }

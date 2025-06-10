@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O mnie – Jakub</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jakub – O mnie</title>
+
+  <!-- Font Awesome do ikon  -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-gHWrSCLy1Y7c5j9NQ8xOJ5AtD6VS4uX2Yq4S62g2QkoVZe19Q6Fnu3+2c8HD1p9xN8BgmpdrTvN5lkvSUYNhA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background"></div>
-  <div class="grid-overlay"></div>
+  <!-- tło + grid to warstwy w CSS; tutaj tylko treść -->
+  <div class="content">
+    <div class="text-left">
+      <h1 class="tagline">Curious growth-driven athlete-scholar</h1>
+      <h2>Hi, I'm Jakub –<br />versatile and<br />always up for<br />something new.</h2>
+      <p>
+        I love sport – it’s where I feel most alive, focused and free.<br />
+        But I also love to learn. Exploring new skills, ideas and experiences gives me
+        energy.<br />
+        Every day, I try to grow a little – mentally, physically and emotionally.
+      </p>
+    </div>
 
-  <main class="content">
-    <section class="text-left">
-      <h1>CURIOUS GROWTH-DRIVEN ATHLETE-SCHOLAR</h1>
-      <h2>Hi, I'm Jakub –<br>versatile and<br>always up for<br>something new.</h2>
-      <p>I love sport – it’s where I feel most alive, focused, and free.<br>
-      But I also love to learn. Exploring new skills, ideas, and experiences gives me energy.<br>
-      Every day, I try to grow a little – mentally, physically, and emotionally.</p>
-    </section>
-
-    <aside class="social-right">
-      <a href="https://github.com/" class="social-btn" aria-label="GitHub">
+    <div class="social-right">
+      <a class="social-btn" href="https://github.com/" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://twitter.com/" class="social-btn" aria-label="Twitter">
+      <a class="social-btn" href="https://x.com/" aria-label="X / Twitter">
         <i class="fab fa-x-twitter"></i>
       </a>
-      <a href="https://instagram.com/" class="social-btn" aria-label="Instagram">
+      <a class="social-btn" href="https://instagram.com/" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="mailto:example@example.com" class="social-btn" aria-label="Email">
+      <a class="social-btn" href="mailto:you@example.com" aria-label="E-mail">
         <i class="fas fa-envelope"></i>
       </a>
-    </aside>
-  </main>
+    </div>
+  </div>
 </body>
 </html>

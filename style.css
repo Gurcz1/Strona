@@ -12,7 +12,7 @@ html, body {
   position: fixed;
   inset: 0;
   /* użyj RAW z Unsplash; przykład ↓ */
-  background-image: url("https://images.unsplash.com/photo-1708434336699-cecf9672f7c6?auto=format&fit=crop&w=2000&q=80");
+  background-image: url("https://unsplash.com/photos/rolling-hills-covered-in-grass-and-shadow-fUfPX4zgOWo");
   background-size: cover;
   background-position: center;
   filter: brightness(0.55);

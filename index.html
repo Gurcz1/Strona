@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jakub – O mnie</title>
 
-  <!-- Font Awesome do ikon  -->
+  <!-- Font Awesome 6.5 – ikony -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,11 +17,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- tło + grid to warstwy w CSS; tutaj tylko treść -->
+  <!-- WARSTWY TŁA (musi być w HTML!) -->
+  <div class="background"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- TREŚĆ -->
   <div class="content">
     <div class="text-left">
       <h1 class="tagline">Curious growth-driven athlete-scholar</h1>
-      <h2>Hi, I'm Jakub –<br />versatile and<br />always up for<br />something new.</h2>
+
+      <!-- H2 było niewidoczne, bo biały napis na białym tle -->
+      <h2>
+        Hi, I'm Jakub –<br />
+        versatile and<br />
+        always up for<br />
+        something new.
+      </h2>
+
       <p>
         I love sport – it’s where I feel most alive, focused and free.<br />
         But I also love to learn. Exploring new skills, ideas and experiences gives me
@@ -30,18 +42,19 @@
       </p>
     </div>
 
+    <!-- IKONY -->
     <div class="social-right">
       <a class="social-btn" href="https://github.com/" aria-label="GitHub">
-        <i class="fab fa-github"></i>
+        <i class="fa-brands fa-github"></i>
       </a>
-      <a class="social-btn" href="https://x.com/" aria-label="X / Twitter">
-        <i class="fab fa-x-twitter"></i>
+      <a class="social-btn" href="https://twitter.com/" aria-label="Twitter / X">
+        <i class="fa-brands fa-x-twitter"></i>      <!-- Jeśli nie działa, zmień na fa-twitter -->
       </a>
       <a class="social-btn" href="https://instagram.com/" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
+        <i class="fa-brands fa-instagram"></i>
       </a>
       <a class="social-btn" href="mailto:you@example.com" aria-label="E-mail">
-        <i class="fas fa-envelope"></i>
+        <i class="fa-solid fa-envelope"></i>
       </a>
     </div>
   </div>

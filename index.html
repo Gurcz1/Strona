@@ -7,10 +7,11 @@
   <title>Jakub Fabian – Portfolio</title>
   <meta name="description" content="Portfolio Jakuba Fabiana – projekty programistyczne i kontakt." />
 
-  <!-- Fonts: preconnect + preload + async-load -->
+  <!-- Google Fonts: preconnect → preload → lazy-load -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
+  <link rel="preload"
+        as="style"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'" />
@@ -19,14 +20,13 @@
           rel="stylesheet" />
   </noscript>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
 
-  <!-- HEADER -->
+  <!-- ░░ HEADER ░░ -->
   <header class="site-header" role="banner">
     <nav class="nav-links" aria-label="Główna">
       <ul>
@@ -38,69 +38,68 @@
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
-  <!-- HERO / ABOUT -->
-  <section id="about" class="hero" role="region" aria-labelledby="hero-heading">
+  <!-- ░░ HERO / ABOUT ░░ -->
+  <section id="about" class="hero" aria-labelledby="hero-heading">
     <div class="hero__content">
       <h2 id="hero-heading" class="tagline" data-i18n="tagline"></h2>
       <h1 class="headline" data-i18n="headline"></h1>
-      <p class="intro" data-i18n="intro"></p>
+      <p class="intro"   data-i18n="intro"></p>
       <a href="#projects" class="btn cta" data-i18n="cta"
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
+    <!-- Ikony społecznościowe -->
     <nav class="socials" aria-label="Moje profile">
       <a href="https://github.com/jakubfabian" aria-label="GitHub – zobacz mój kod">
-        <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true" /></div>
+        <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">GitHub</span>
       </a>
       <a href="https://twitter.com/jakubfabian" aria-label="X / Twitter – śledź mnie">
-        <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true" /></div>
+        <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">X</span>
       </a>
       <a href="https://instagram.com/jakubfabian" aria-label="Instagram – moje zdjęcia">
-        <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true" /></div>
+        <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Instagram</span>
       </a>
       <a href="mailto:jakub@example.com" aria-label="Wyślij mi e-mail">
-        <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true" /></div>
+        <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Mail</span>
       </a>
     </nav>
   </section>
 
-  <!-- MAIN -->
+  <!-- ░░ PROJECTS ░░ -->
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
       <p data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- 1 ▸ AI Meal Planner -->
+        <!-- Projekt 1 -->
         <article class="project-card">
           <img src="img/mealplanner.webp"
                alt="Zrzut ekranu AI Meal Planner"
                width="400" height="225"
-               loading="lazy" decoding="async" />
+               loading="lazy" decoding="async">
           <h3>AI Meal Planner</h3>
           <p data-i18n="projects.example"></p>
         </article>
 
-        <!-- 2 ▸ linki (Next.js 14) -->
+        <!-- Projekt 2 – linki -->
         <article class="project-card">
           <a href="https://github.com/Gurcz1/linki" target="_blank" rel="noopener">
-            <img src="icons/linki.png"
+            <img src="https://opengraph.githubassets.com/1/Gurcz1/linki"
                  alt="Podgląd repozytorium linki na GitHubie"
                  width="600" height="314"
-                 loading="lazy" decoding="async" />
+                 loading="lazy" decoding="async">
           </a>
 
           <h3>linki – bio-link w Next.js 14</h3>
 
-          <p>
-            Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę
-            z przyciskami do wybranych serwisów (YouTube, Instagram, Gmail,
-            LinkedIn, własne strony).
-          </p>
+          <p>Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę
+             z przyciskami do wybranych serwisów (YouTube, Instagram, Gmail,
+             LinkedIn, własne strony).</p>
 
           <ul class="feature-list">
             <li>Dodawanie dowolnej liczby linków</li>
@@ -110,10 +109,8 @@
             <li>Dane zapisywane lokalnie – bez logowania</li>
           </ul>
 
-          <p>
-            Idealne jako osobista strona startowa, bio-link
-            lub panel szybkiego dostępu.
-          </p>
+          <p>Idealne jako osobista strona startowa, bio-link
+             lub panel szybkiego dostępu.</p>
 
           <a class="btn-mini"
              href="https://github.com/Gurcz1/linki"
@@ -124,6 +121,7 @@
       </div>
     </section>
 
+    <!-- ░░ CONTACT ░░ -->
     <section id="contact" class="section alt" aria-labelledby="contact-heading">
       <h2 id="contact-heading" data-i18n="contact.title"></h2>
       <p>Email: <a href="mailto:jakub@example.com">jakub@example.com</a></p>

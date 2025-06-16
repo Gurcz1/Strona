@@ -1,6 +1,6 @@
 /* RESET & GLOBALS */
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}          /* smooth-scroll */
+html{scroll-behavior:smooth;}
 body{
   font-family:'Inter',sans-serif;
   color:#fff;
@@ -13,47 +13,35 @@ body{
 .skip-link:focus-visible{position:static;background:#ffd92f;color:#000;padding:8px 16px;font-weight:600;z-index:1200;}
 
 /* HEADER */
-.site-header{
-  position:sticky;top:0;z-index:1100;height:64px;
-  background:rgba(0,0,0,.85);backdrop-filter:blur(8px);
-  display:flex;align-items:center;justify-content:space-between;padding:0 5vw;
-}
+.site-header{position:sticky;top:0;z-index:1100;height:64px;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;}
 .nav-links ul{display:flex;gap:30px;list-style:none;}
 .nav-links a{color:#fff;font-weight:600;text-decoration:none;position:relative;}
-.nav-links a::after{
-  content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;
-  background:#26a6ff;transition:width .25s;
-}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#26a6ff;transition:width .25s;}
 .nav-links a:hover::after{width:100%;}
-/* ACTIVE link (scroll-spy) */
 .nav-links a.active{color:#26a6ff;}
 .nav-links a.active::after{width:100%;}
-
 #lang-toggle{background:#ffffff22;border:2px solid #fff;color:#fff;padding:6px 14px;border-radius:30px;font-weight:600;cursor:pointer;}
 
-/* HERO */
-.hero{
-  min-height:calc(100vh - 64px);
-  background:rgba(0,0,0,.55);
-  display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;
-  padding:calc(64px + 60px) 7vw 80px;
+/* FOCUS RING */
+a:focus-visible,button:focus-visible,.btn:focus-visible,.btn-mini:focus-visible{
+  outline:3px solid #ffd92f;outline-offset:4px;
 }
+.nav-links a:focus-visible{text-decoration:underline;}
+
+/* HERO */
+.hero{min-height:calc(100vh - 64px);background:rgba(0,0,0,.55);display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;padding:calc(64px + 60px) 7vw 80px;}
 .hero__content{max-width:650px;}
 .tagline{color:#26a6ff;font-size:1rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
 .headline{font-size:3rem;font-weight:700;line-height:1.2;margin-bottom:22px;}
 .intro{font-size:1.25rem;line-height:1.5;margin-bottom:35px;}
 
-/* SOCIAL ICONS (desktop) */
-.socials{
-  display:grid;grid-auto-rows:min-content;gap:28px;margin-right:2vw;align-self:center;
-}
+/* SOCIAL ICONS */
+.socials{display:grid;grid-auto-rows:min-content;gap:28px;margin-right:2vw;align-self:center;}
 .socials a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#fff;font-size:.75rem;font-weight:600;}
 .icon-circle{background:#fff;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;transition:transform .2s;}
 .icon-circle img{width:60%;}
 .socials a:hover .icon-circle{transform:scale(1.1);}
 .icon-label{margin-top:6px;}
-
-/* SOCIAL ICONS (mobile footer) */
 .socials-footer{display:none;}
 .socials-footer img{width:36px;height:36px;filter:invert(1);}
 .socials-footer a{display:inline-block;margin:0 12px;transition:transform .2s;}
@@ -67,13 +55,13 @@ body{
 .btn-mini{display:inline-block;padding:8px 18px;border:2px solid #26a6ff;color:#26a6ff;border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;transition:background .2s,color .2s;}
 .btn-mini:hover{background:#26a6ff;color:#000;}
 
-/* SECTIONS */
+/* SEKCJE */
 .section{padding:90px 7vw;background:#0d0d0d;}
 .section.alt{background:#111922;}
 .section h2{font-size:2.25rem;margin-bottom:15px;color:#26a6ff;}
 .section p{font-size:1rem;max-width:800px;margin-bottom:38px;}
 
-/* PROJECT GRID */
+/* PROJEKTY */
 .project-grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
 .project-card{background:#1a1a1a;padding:25px;border-radius:16px;transition:transform .25s;}
 .project-card:hover{transform:translateY(-6px);}
@@ -84,10 +72,6 @@ body{
 
 /* FOOTER */
 .footer{text-align:center;padding:25px 0;background:#000;font-size:.875rem;color:#888;}
-
-/* FOCUS RING */
-a:focus-visible,button:focus-visible,.btn:focus-visible,.btn-mini:focus-visible{outline:3px solid #ffd92f;outline-offset:4px;}
-.nav-links a:focus-visible{outline-offset:2px;}
 
 /* MEDIA */
 @media(max-width:900px){

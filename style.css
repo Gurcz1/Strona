@@ -116,3 +116,20 @@ a:focus-visible,button:focus-visible,.btn:focus-visible{
   .nav-links ul{gap:18px;}
   .icon-circle{width:56px;height:56px;}
 }
+
+/* ------------- MINI BUTTON (na kartach projektów) ------------- */
+.btn-mini{
+  display:inline-block;
+  padding:8px 18px;
+  border:2px solid #26a6ff;
+  color:#26a6ff;
+  border-radius:6px;
+  font-size:.9rem;
+  font-weight:600;
+  text-decoration:none;
+  transition:background .2s,color .2s;
+}
+.btn-mini:hover{
+  background:#26a6ff;
+  color:#000;
+}

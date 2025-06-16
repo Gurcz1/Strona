@@ -1,4 +1,4 @@
-/* Reset & globals */
+/* RESET & GLOBALS */
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -10,136 +10,111 @@ body{
   min-height:100vh;
 }
 
-/* Sticky header */
+/* ░░  STICKY HEADER  ░░ */
 .site-header{
-  position:sticky;
-  top:0;
-  z-index:1100;
+  position:sticky; top:0; z-index:1100;
   height:64px;
-  background:rgba(0,0,0,.85);
-  backdrop-filter:blur(8px);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  background:rgba(0,0,0,.85); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:space-between;
   padding:0 5vw;
 }
 .nav-links ul{display:flex;gap:30px;list-style:none;}
 .nav-links a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  position:relative;
+  color:#fff; font-weight:600; text-decoration:none; position:relative;
 }
 .nav-links a::after{
-  content:'';
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0;
-  height:2px;
-  background:#26a6ff;
-  transition:width .25s;
+  content:''; position:absolute; left:0; bottom:-4px;
+  width:0; height:2px; background:#26a6ff; transition:width .25s;
 }
 .nav-links a:hover::after{width:100%;}
-
 #lang-toggle{
-  background:#ffffff22;
-  border:2px solid #fff;
-  color:#fff;
-  padding:6px 14px;
-  border-radius:30px;
-  font-weight:600;
-  cursor:pointer;
+  background:#ffffff22; border:2px solid #fff; color:#fff;
+  padding:6px 14px; border-radius:30px; font-weight:600; cursor:pointer;
 }
 
-/* Hero */
+/* ░░  HERO / ABOUT  ░░ */
 .hero{
   flex:1;
   background:rgba(0,0,0,.55);
-  display:flex;
+  display:grid;                 /*  GRID  */
+  grid-template-columns:1fr auto;
   align-items:center;
-  justify-content:space-between;
-  padding:calc(64px + 60px) 7vw 80px; /* odsuwa od headera */
+  padding:calc(64px + 60px) 7vw 80px;
   gap:40px;
 }
 .hero__content{max-width:650px;}
 .tagline{
-  color:#26a6ff;
-  letter-spacing:1px;
-  font-size:1rem;
-  font-weight:700;
-  margin-bottom:20px;
-  text-transform:uppercase;
+  color:#26a6ff; letter-spacing:1px;
+  font-size:1rem; font-weight:700; margin-bottom:20px; text-transform:uppercase;
 }
-.headline{
-  font-size:3rem;
-  font-weight:700;
-  line-height:1.2;
-  margin-bottom:22px;
+.headline{font-size:3rem; font-weight:700; line-height:1.2; margin-bottom:22px;}
+.intro{font-size:1.25rem; line-height:1.5; margin-bottom:35px;}
+
+/* ░░  IKONY  ░░ */
+.socials{
+  display:flex; flex-direction:column; gap:28px;
+  align-items:flex-end;               /* trzyma przy prawej, ale nie dotyka krawędzi */
+  margin-right:2vw;                   /* stały odstęp od prawej na desktopie */
 }
-.intro{font-size:1.25rem;line-height:1.5;margin-bottom:35px;}
+.socials a{
+  text-align:center; text-decoration:none; font-size:.75rem;
+  font-weight:600; color:#fff;
+  display:flex; flex-direction:column; align-items:center;
+}
+.icon-circle{
+  background:#fff; width:64px; height:64px; border-radius:50%;
+  display:grid; place-items:center; transition:transform .2s;
+}
+.icon-circle img{width:60%;}
+.socials a:hover .icon-circle{transform:scale(1.1);}
+.icon-label{margin-top:6px;}
 
-.socials{display:flex;flex-direction:column;gap:28px;}
-
-
-/* Buttons */
+/* ░░  BUTTONS  ░░ */
 .btn{
-  display:inline-block;
-  padding:12px 28px;
-  border:2px solid #26a6ff;
-  color:#26a6ff;
-  border-radius:8px;
-  font-weight:600;
-  text-decoration:none;
-  transition:background .2s,color .2s;
+  display:inline-block; padding:12px 28px;
+  border:2px solid #26a6ff; color:#26a6ff; border-radius:8px;
+  font-weight:600; text-decoration:none; transition:background .2s,color .2s;
 }
-.btn:hover{background:#26a6ff;color:#000;}
-.btn.cta{
-  background:#26a6ff;
-  color:#000;
-  border-color:#26a6ff;
-}
-.btn.cta:hover{
-  background:#1c86e6;
-  border-color:#1c86e6;
-  color:#fff;
-}
+.btn:hover{background:#26a6ff; color:#000;}
+.btn.cta{background:#26a6ff; color:#000;}
+.btn.cta:hover{background:#1c86e6; color:#fff;}
 
-/* Sections */
-.section{padding:90px 7vw;background:#0d0d0d;}
+/* ░░  SECTIONS  ░░ */
+.section{padding:90px 7vw; background:#0d0d0d;}
 .section.alt{background:#111922;}
-.section h2{font-size:2.25rem;margin-bottom:15px;color:#26a6ff;}
-.section p{font-size:1rem;max-width:800px;margin-bottom:38px;}
+.section h2{font-size:2.25rem; margin-bottom:15px; color:#26a6ff;}
+.section p{font-size:1rem; max-width:800px; margin-bottom:38px;}
 
-/* Projects */
+/* ░░  PROJECTS  ░░ */
 .project-grid{
-  display:grid;
-  gap:30px;
+  display:grid; gap:30px;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 }
 .project-card{
-  background:#1a1a1a;
-  padding:25px;
-  border-radius:16px;
+  background:#1a1a1a; padding:25px; border-radius:16px;
   transition:transform .25s;
 }
 .project-card:hover{transform:translateY(-6px);}
-.project-card h3{margin-bottom:10px;color:#fff;}
+.project-card h3{margin-bottom:10px; color:#fff;}
 .project-card p{color:#ccc;}
 
-/* Footer */
+/* ░░  FOOTER  ░░ */
 .footer{
-  text-align:center;
-  padding:25px 0;
-  background:#000;
-  font-size:.875rem;
-  color:#888;
+  text-align:center; padding:25px 0; background:#000;
+  font-size:.875rem; color:#888;
 }
 
-/* Responsive */
+/* ░░  RESPONSIVE  ░░ */
 @media(max-width:900px){
-  .hero{flex-direction:column;text-align:center;}
-  .socials{flex-direction:row;}
+  .hero{
+    grid-template-columns:1fr;       /* treść nad ikonami */
+    text-align:center;
+  }
+  .socials{
+    flex-direction:row; gap:20px;
+    justify-content:center;
+    margin:32px auto 0;              /* ikony odsuną się od krawędzi */
+  }
   .headline{font-size:2.5rem;}
   .intro{font-size:1.1rem;}
 }
@@ -147,46 +122,5 @@ body{
   .headline{font-size:2rem;}
   .tagline{font-size:.875rem;}
   .nav-links ul{gap:18px;}
-}
-
-/* ───── SOCIALS ───── */
-.socials{
-  display:flex;
-  flex-direction:column;
-  gap:28px;
-}
-
-/* link = cała „kapsułka” z ikoną i napisem */
-.socials a{
-  text-align:center;
-  color:#fff;
-  text-decoration:none;
-  font-size:.75rem;
-  font-weight:600;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-/* biała kółeczko z ikoną */
-.icon-circle{
-  background:#fff;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  transition:transform .2s;
-}
-.socials a:hover .icon-circle{transform:scale(1.1);}
-
-/* sama grafika */
-.socials img{width:60%;}
-
-/* podpis pod ikoną */
-.icon-label{margin-top:6px;}
-
-/* RESPONSYWNOŚĆ – na mobile ikony w rzędzie */
-@media(max-width:900px){
-  .socials{flex-direction:row; justify-content:center;}
+  .icon-circle{width:56px;height:56px;}
 }

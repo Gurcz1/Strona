@@ -1,28 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jakub – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jakub – Strona osobista</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="overlay">
-    <div class="content">
-      <h2 class="tagline">CURIOUS GROWTH-DRIVEN ATHLETE–SCHOLAR</h2>
-      <h1>Hi, I'm Jakub –<br>versatile and<br><span>always up for<br>something new.</span></h1>
-      <p>
-        I love sport – it’s where I feel most alive, focused, and free.<br>
-        But I also love to learn. Exploring new skills, ideas, and experiences gives me energy.<br>
-        Every day, I try to grow a little – mentally, physically, and emotionally.
-      </p>
+  <button id="lang-toggle">EN</button>
+
+  <header class="hero">
+    <div class="hero__content">
+      <h2 data-i18n="tagline" class="tagline"></h2>
+      <h1 data-i18n="headline" class="headline"></h1>
+      <p data-i18n="lead" class="lead"></p>
     </div>
-    <div class="socials">
-      <a href="#"><img src="github.png" alt="GitHub"></a>
-      <a href="#"><img src="x.png" alt="X/Twitter"></a>
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="mail.png" alt="Email"></a>
-    </div>
-  </div>
+
+    <nav class="socials">
+      <a href="#"><img src="icons/github.svg" alt="GitHub"></a>
+      <a href="#"><img src="icons/x.svg" alt="X"></a>
+      <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+      <a href="mailto:you@example.com"><img src="icons/mail.svg" alt="Email"></a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects" class="section">
+      <h2 data-i18n="projects.title"></h2>
+      <p data-i18n="projects.subtitle"></p>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>AI Meal Planner</h3>
+          <p data-i18n="projects.example"></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cv" class="section alt">
+      <h2 data-i18n="cv.title"></h2>
+      <p data-i18n="cv.subtitle"></p>
+      <a href="cv.pdf" class="btn" target="_blank" rel="noopener" data-i18n="cv.button"></a>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 data-i18n="contact.title"></h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p data-i18n="contact.note"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="year"></span> Jakub Fabian
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

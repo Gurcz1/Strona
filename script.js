@@ -6,7 +6,7 @@ const dict = {
     'nav.contact':'Kontakt',
 
     tagline:'CIEKAWY ROZWOJU SPORTOWIEC-STUDENT',
-    headline:'Cześć, jestem Jakub Góralski —\nwszechstronny i zawsze chętny na coś nowego.',
+    headline:'Cześć, jestem Jakub —\nwszechstronny i zawsze chętny na coś nowego.',
     intro:'Programista, pasjonat sportu i ciągłego rozwoju.',
     cta:'Zobacz projekty',
 
@@ -31,7 +31,7 @@ const dict = {
     'nav.contact':'Contact',
 
     tagline:'CURIOUS GROWTH-DRIVEN ATHLETE-SCHOLAR',
-    headline:`Hi, I'm Jakub Góralski –\nversatile and always up for something new.`,
+    headline:`Hi, I'm Jakub –\nversatile and always up for something new.`,
     intro:'Developer, sports enthusiast and lifelong learner.',
     cta:'See projects',
 

@@ -38,7 +38,7 @@ body{
 
 /* HERO */
 .hero{
-  flex:1;background:rgba(0,0,0,.55);
+  background:rgba(0,0,0,.55);
   display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;
   padding:calc(64px + 60px) 7vw 80px;
 }

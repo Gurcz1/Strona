@@ -18,6 +18,7 @@ const dict = {
     'linki.f2':'Etykiety, kolory, ikony',
     'linki.f3':'Własne ikony i drag-&-drop',
     'linki.f4':'Dane lokalnie – bez logowania',
+    'linki.btn':'Repozytorium',
 
     'contact.title':'Kontakt',
     'contact.note':'Chętnie odpowiem na Twoją wiadomość!',
@@ -39,9 +40,10 @@ const dict = {
 
     'linki.desc':'A simple “link hub” app that lets you build a sleek page with buttons to any services you choose.',
     'linki.f1':'Unlimited number of links',
-    'linki.f2':'Custom labels, colors and icons',
+    'linki.f2':'Custom labels, colors & icons',
     'linki.f3':'Upload icons & drag-and-drop order',
-    'linki.f4':'Data saved locally – no login',
+    'linki.f4':'Data stored locally – no login',
+    'linki.btn':'View repository',
 
     'contact.title':'Contact',
     'contact.note':'Feel free to drop me a message!',
@@ -50,9 +52,9 @@ const dict = {
 };
 
 let currentLang = 'pl';
-const toggleBtn   = document.getElementById('lang-toggle');
+const toggleBtn = document.getElementById('lang-toggle');
 
-/* ───── funkcja zmiany języka ───── */
+/* ───── zmiana języka ───── */
 function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.dataset.i18n;
@@ -72,10 +74,10 @@ function applyLang(lang){
   currentLang = lang;
 }
 
-/* ───── obsługa przycisku ───── */
+/* ───── obsługa kliknięcia ───── */
 toggleBtn.addEventListener('click', ()=>applyLang(currentLang==='pl'?'en':'pl'));
 
-/* ───── inicjalizacja ───── */
+/* ───── init ───── */
 applyLang('pl');
 document.getElementById('year').textContent = new Date().getFullYear();
 

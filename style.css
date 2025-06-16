@@ -5,18 +5,16 @@ body{
   font-family:'Inter',sans-serif;
   color:#fff;
   background:url('background.jpg') no-repeat center/cover fixed;
-  display:flex;
-  flex-direction:column;
-  min-height:100vh;
+  display:flex;flex-direction:column;min-height:100vh;
 }
 
 /* SKIP-LINK */
 .skip-link{
-  position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;
+  position:absolute;left:-999px;width:1px;height:1px;overflow:hidden;
 }
 .skip-link:focus-visible{
-  position:static;width:auto;height:auto;
-  background:#ffd92f;color:#000;padding:8px 16px;font-weight:600;z-index:1200;
+  position:static;background:#ffd92f;color:#000;padding:8px 16px;
+  font-weight:600;z-index:1200;
 }
 
 /* HEADER */
@@ -27,9 +25,7 @@ body{
   padding:0 5vw;
 }
 .nav-links ul{display:flex;gap:30px;list-style:none;}
-.nav-links a{
-  color:#fff;text-decoration:none;font-weight:600;position:relative;
-}
+.nav-links a{color:#fff;font-weight:600;text-decoration:none;position:relative;}
 .nav-links a::after{
   content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;
   background:#26a6ff;transition:width .25s;
@@ -47,18 +43,19 @@ body{
   padding:calc(64px + 60px) 7vw 80px;
 }
 .hero__content{max-width:650px;}
-.tagline{color:#26a6ff;letter-spacing:1px;font-size:1rem;font-weight:700;
-        margin-bottom:20px;text-transform:uppercase;}
+.tagline{color:#26a6ff;font-size:1rem;font-weight:700;letter-spacing:1px;
+        text-transform:uppercase;margin-bottom:20px;}
 .headline{font-size:3rem;font-weight:700;line-height:1.2;margin-bottom:22px;}
 .intro{font-size:1.25rem;line-height:1.5;margin-bottom:35px;}
 
-/* SOCIAL ICONS */
+/* SOCIAL ICONS (desktop) */
 .socials{
   display:grid;grid-auto-rows:min-content;gap:28px;margin-right:2vw;
+  align-self:center;                   /* ★ wyśrodkuj względem nagłówka */
 }
 .socials a{
-  text-align:center;text-decoration:none;color:#fff;font-size:.75rem;
-  font-weight:600;display:flex;flex-direction:column;align-items:center;
+  display:flex;flex-direction:column;align-items:center;
+  text-decoration:none;color:#fff;font-size:.75rem;font-weight:600;
 }
 .icon-circle{
   background:#fff;width:64px;height:64px;border-radius:50%;
@@ -67,6 +64,14 @@ body{
 .icon-circle img{width:60%;}
 .socials a:hover .icon-circle{transform:scale(1.1);}
 .icon-label{margin-top:6px;}
+
+/* SOCIAL ICONS (mobile – footer) */
+.socials-footer{display:none;}
+.socials-footer img{width:36px;height:36px;filter:invert(1);}
+.socials-footer a{
+  display:inline-block;margin:0 12px;transition:transform .2s;
+}
+.socials-footer a:hover{transform:scale(1.1);}
 
 /* BUTTONS */
 .btn{
@@ -77,8 +82,6 @@ body{
 .btn:hover{background:#26a6ff;color:#000;}
 .btn.cta{background:#26a6ff;color:#000;}
 .btn.cta:hover{background:#1c86e6;color:#fff;}
-
-/* MINI BUTTON */
 .btn-mini{
   display:inline-block;padding:8px 18px;border:2px solid #26a6ff;
   color:#26a6ff;border-radius:6px;font-size:.9rem;font-weight:600;
@@ -92,7 +95,7 @@ body{
 .section h2{font-size:2.25rem;margin-bottom:15px;color:#26a6ff;}
 .section p{font-size:1rem;max-width:800px;margin-bottom:38px;}
 
-/* PROJECTS GRID */
+/* PROJECT GRID */
 .project-grid{
   display:grid;gap:30px;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -104,8 +107,6 @@ body{
 .project-card:hover{transform:translateY(-6px);}
 .project-card h3{margin-bottom:10px;color:#fff;}
 .project-card p{color:#ccc;}
-
-/* FEATURE LIST */
 .feature-list{
   padding-left:1.2rem;margin:12px 0 18px;
 }
@@ -114,8 +115,10 @@ body{
 }
 
 /* FOOTER */
-.footer{text-align:center;padding:25px 0;background:#000;
-        font-size:.875rem;color:#888;}
+.footer{
+  text-align:center;padding:25px 0;background:#000;
+  font-size:.875rem;color:#888;
+}
 
 /* FOCUS */
 a:focus-visible,button:focus-visible,.btn:focus-visible,.btn-mini:focus-visible{
@@ -126,10 +129,9 @@ a:focus-visible,button:focus-visible,.btn:focus-visible,.btn-mini:focus-visible{
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;text-align:center;}
-  .socials{
-    grid-auto-flow:column;
-    grid-template-columns:repeat(4,min-content);
-    gap:20px;justify-content:center;margin:32px auto 0;padding:0 4vw;
+  .socials{display:none;}               /* ukryj pionowe ikony */
+  .socials-footer{
+    display:flex;justify-content:center;padding-top:24px;
   }
   .headline{font-size:2.5rem;}
   .intro{font-size:1.1rem;}

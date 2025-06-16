@@ -47,9 +47,9 @@ body{
   font-size:3rem;
   font-weight:700;
   line-height:1.2;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
-.lead{font-size:1.125rem;line-height:1.6;}
+.intro{font-size:1.25rem;line-height:1.5;margin-bottom:35px;}
 
 .socials{
   display:flex;
@@ -115,6 +115,17 @@ body{
 }
 .btn:hover{background:#26a6ff;color:#000;}
 
+.btn.cta{
+  background:#26a6ff;
+  color:#000;
+  border-color:#26a6ff;
+}
+.btn.cta:hover{
+  background:#1c86e6;
+  border-color:#1c86e6;
+  color:#fff;
+}
+
 .footer{
   text-align:center;
   padding:25px 0;
@@ -127,6 +138,7 @@ body{
   .hero{flex-direction:column;text-align:center;}
   .socials{flex-direction:row;}
   .headline{font-size:2.5rem;}
+  .intro{font-size:1.1rem;}
   .two-columns{flex-direction:column;}
 }
 @media(max-width:600px){

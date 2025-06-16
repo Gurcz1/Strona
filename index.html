@@ -2,23 +2,56 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jakub – Strona osobista</title>
+
+  <title>Jakub Fabian – Portfolio | Developer & Athlete</title>
+
+  <!-- ░░  SEO  ░░ -->
+  <meta name="description"
+        content="Portfolio Jakuba Fabiana – pełen pasji programista i sportowiec. Sprawdź moje projekty, doświadczenie i dane kontaktowe." />
+  <meta name="keywords"
+        content="Jakub Fabian, portfolio, projekty, programista, developer, sportowiec, software engineer" />
+  <link rel="canonical" href="https://jakubfabian.dev/" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- ░░  Open Graph / Facebook  ░░ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://jakubfabian.dev/" />
+  <meta property="og:locale"      content="pl_PL" />
+  <meta property="og:title"       content="Jakub Fabian – Portfolio" />
+  <meta property="og:description" content="Zobacz moje projekty programistyczne i dowiedz się więcej o mnie." />
+  <meta property="og:image"       content="https://jakubfabian.dev/og-cover.jpg" />
+
+  <!-- ░░  Twitter Cards  ░░ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Jakub Fabian – Portfolio" />
+  <meta name="twitter:description" content="Zobacz moje projekty programistyczne i dowiedz się więcej o mnie." />
+  <meta name="twitter:image"       content="https://jakubfabian.dev/og-cover.jpg" />
+
+  <!-- ░░  Theme & Icons  ░░ -->
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg" />
+  <link rel="apple-touch-icon"      href="icons/apple-touch-icon.png" />
+
+  <!-- ░░  Fonts & CSS  ░░ -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <!-- skip-link dla czytników ekranu / klawiatury -->
+<body>
+  <!-- ──────────────────────────────────────────────────────────────── -->
+  <!--                          SKIP-LINK                              -->
+  <!-- ──────────────────────────────────────────────────────────────── -->
   <a href="#main" class="skip-link">Przejdź do treści</a>
 
   <!-- ░░  STICKY HEADER  ░░ -->
   <header class="site-header" role="banner">
     <nav class="nav-links" aria-label="Główna">
       <ul>
-        <li><a href="#about"   data-i18n="nav.about"></a></li>
+        <li><a href="#about"    data-i18n="nav.about"></a></li>
         <li><a href="#projects" data-i18n="nav.projects"></a></li>
-        <li><a href="#contact" data-i18n="nav.contact"></a></li>
+        <li><a href="#contact"  data-i18n="nav.contact"></a></li>
       </ul>
     </nav>
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
@@ -29,33 +62,29 @@
     <div class="hero__content">
       <h2 id="hero-heading" class="tagline" data-i18n="tagline"></h2>
       <h1 class="headline" data-i18n="headline"></h1>
-      <p  class="intro"   data-i18n="intro"></p>
+      <p  class="intro"    data-i18n="intro"></p>
       <a href="#projects" class="btn cta" data-i18n="cta"
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!-- ikony społecznościowe -->
+    <!--  IKONY SPOŁECZNOŚCIOWE  -->
     <nav class="socials" aria-label="Moje profile">
-      <a href="https://github.com/jakubfabian"
-         aria-label="GitHub – zobacz mój kod">
+      <a href="https://github.com/jakubfabian" aria-label="GitHub – zobacz mój kod">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">GitHub</span>
       </a>
 
-      <a href="https://twitter.com/jakubfabian"
-         aria-label="X / Twitter – śledź mnie">
+      <a href="https://twitter.com/jakubfabian" aria-label="X / Twitter – śledź mnie">
         <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">X</span>
       </a>
 
-      <a href="https://instagram.com/jakubfabian"
-         aria-label="Instagram – moje zdjęcia">
+      <a href="https://instagram.com/jakubfabian" aria-label="Instagram – moje zdjęcia">
         <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Instagram</span>
       </a>
 
-      <a href="mailto:jakub@example.com"
-         aria-label="Wyślij mi e-mail">
+      <a href="mailto:jakub@example.com" aria-label="Wyślij mi e-mail">
         <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Mail</span>
       </a>
@@ -66,7 +95,7 @@
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
-      <p  data-i18n="projects.subtitle"></p>
+      <p data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
         <article class="project-card">

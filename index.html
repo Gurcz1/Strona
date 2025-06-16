@@ -4,90 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jakub – Strona osobista</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!--  ░░  STICKY HEADER  ░░  -->
-  <header class="site-header">
-    <nav class="nav-links">
+  <!-- skip-link dla czytników ekranu / klawiatury -->
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+
+  <!-- ░░  STICKY HEADER  ░░ -->
+  <header class="site-header" role="banner">
+    <nav class="nav-links" aria-label="Główna">
       <ul>
-        <li><a href="#about" data-i18n="nav.about"></a></li>
+        <li><a href="#about"   data-i18n="nav.about"></a></li>
         <li><a href="#projects" data-i18n="nav.projects"></a></li>
         <li><a href="#contact" data-i18n="nav.contact"></a></li>
       </ul>
     </nav>
-    <button id="lang-toggle">EN</button>
+    <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
-  <!--  ░░  O MNIE / ABOUT  ░░  -->
-  <section id="about" class="hero">
-  <div class="hero__content">
-    <h2 class="tagline" data-i18n="tagline"></h2>
-    <h1 class="headline" data-i18n="headline"></h1>
-    <p  class="intro"   data-i18n="intro"></p>
-    <a href="#projects" class="btn cta" data-i18n="cta"></a>
-  </div>
-
-  <!--  ░░  IKONY Z PODPISEM  ░░  -->
-  <nav class="socials">
-    <a href="https://github.com/jakubfabian"
-       aria-label="GitHub – zobacz mój kod">
-      <div class="icon-circle">
-        <img src="icons/github.svg" alt="" />
-      </div>
-      <span class="icon-label">GitHub</span>
-    </a>
-
-    <a href="https://twitter.com/jakubfabian"
-       aria-label="X / Twitter – śledź mnie">
-      <div class="icon-circle">
-        <img src="icons/x.svg" alt="" />
-      </div>
-      <span class="icon-label">X</span>
-    </a>
-
-    <a href="https://instagram.com/jakubfabian"
-       aria-label="Instagram – moje zdjęcia">
-      <div class="icon-circle">
-        <img src="icons/instagram.svg" alt="" />
-      </div>
-      <span class="icon-label">Instagram</span>
-    </a>
-
-    <a href="mailto:jakub@example.com"
-       aria-label="Wyślij mi maila">
-      <div class="icon-circle">
-        <img src="icons/mail.svg" alt="" />
-      </div>
-      <span class="icon-label">Mail</span>
-    </a>
-  </nav>
-</section>
-
-  <!--  ░░  PROJEKTY  ░░  -->
-  <section id="projects" class="section">
-    <h2 data-i18n="projects.title"></h2>
-    <p data-i18n="projects.subtitle"></p>
-
-    <div class="project-grid">
-      <article class="project-card">
-        <h3>AI Meal Planner</h3>
-        <p data-i18n="projects.example"></p>
-      </article>
-      <!-- kolejne <article> według potrzeb -->
+  <!-- ░░  O MNIE / HERO  ░░ -->
+  <section id="about" class="hero" role="region" aria-labelledby="hero-heading">
+    <div class="hero__content">
+      <h2 id="hero-heading" class="tagline" data-i18n="tagline"></h2>
+      <h1 class="headline" data-i18n="headline"></h1>
+      <p  class="intro"   data-i18n="intro"></p>
+      <a href="#projects" class="btn cta" data-i18n="cta"
+         aria-label="Przejdź do sekcji Projekty"></a>
     </div>
+
+    <!-- ikony społecznościowe -->
+    <nav class="socials" aria-label="Moje profile">
+      <a href="https://github.com/jakubfabian"
+         aria-label="GitHub – zobacz mój kod">
+        <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
+        <span class="icon-label">GitHub</span>
+      </a>
+
+      <a href="https://twitter.com/jakubfabian"
+         aria-label="X / Twitter – śledź mnie">
+        <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
+        <span class="icon-label">X</span>
+      </a>
+
+      <a href="https://instagram.com/jakubfabian"
+         aria-label="Instagram – moje zdjęcia">
+        <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true"></div>
+        <span class="icon-label">Instagram</span>
+      </a>
+
+      <a href="mailto:jakub@example.com"
+         aria-label="Wyślij mi e-mail">
+        <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true"></div>
+        <span class="icon-label">Mail</span>
+      </a>
+    </nav>
   </section>
 
-  <!--  ░░  KONTAKT  ░░  -->
-  <section id="contact" class="section alt">
-    <h2 data-i18n="contact.title"></h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p data-i18n="contact.note"></p>
-  </section>
+  <!-- ░░  PROJEKTY  ░░ -->
+  <main id="main">
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" data-i18n="projects.title"></h2>
+      <p  data-i18n="projects.subtitle"></p>
 
-  <footer class="footer">
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>AI Meal Planner</h3>
+          <p data-i18n="projects.example"></p>
+        </article>
+        <!-- kolejne <article> według potrzeb -->
+      </div>
+    </section>
+
+    <!-- ░░  KONTAKT  ░░ -->
+    <section id="contact" class="section alt" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" data-i18n="contact.title"></h2>
+      <p>Email: <a href="mailto:jakub@example.com">jakub@example.com</a></p>
+      <p data-i18n="contact.note"></p>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
     © <span id="year"></span> Jakub Fabian
   </footer>
 

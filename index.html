@@ -7,40 +7,38 @@
   <title>Jakub Fabian – Portfolio</title>
   <meta name="description" content="Portfolio Jakuba Fabiana – projekty programistyczne i kontakt.">
 
-  <!-- 1. FONTY – preconnect + preload + async-load -->
+  <!-- Fonts – preconnect + preload + async-load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link rel="preload"
         as="style"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet"
-        media="print"
-        onload="this.media='all'">
+        rel="stylesheet" media="print" onload="this.media='all'">
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
           rel="stylesheet">
   </noscript>
 
-  <!-- 2. STYLE -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- 3. GOOGLE ANALYTICS 4 (zamień ID) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7W6SQRL3NE"></script>
+  <!-- Google Analytics (jeśli używasz) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-7W6SQRL3NE', { anonymize_ip: true });
+    gtag('config', 'G-XXXXXXX',{ anonymize_ip:true });
   </script>
+  -->
 </head>
 
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
 
-  <!--  HEADER  -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <nav class="nav-links" aria-label="Główna">
       <ul>
@@ -52,7 +50,7 @@
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
-  <!--  HERO  -->
+  <!-- HERO / ABOUT -->
   <section id="about" class="hero" role="region" aria-labelledby="hero-heading">
     <div class="hero__content">
       <h2 id="hero-heading" class="tagline" data-i18n="tagline"></h2>
@@ -62,7 +60,6 @@
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!--  IKONY SPOŁECZNOŚCIOWE  -->
     <nav class="socials" aria-label="Moje profile">
       <a href="https://github.com/jakubfabian" aria-label="GitHub – zobacz mój kod">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
@@ -83,22 +80,42 @@
     </nav>
   </section>
 
-  <!--  MAIN  -->
+  <!-- MAIN -->
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
       <p data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
+
+        <!-- 1 ▸ AI Meal Planner -->
         <article class="project-card">
-          <!-- miniature z lazy-loading -->
           <img src="img/mealplanner.webp"
-               alt="Zrzut ekranu aplikacji AI Meal Planner"
+               alt="Zrzut ekranu AI Meal Planner"
                width="400" height="225"
                loading="lazy" decoding="async">
           <h3>AI Meal Planner</h3>
           <p data-i18n="projects.example"></p>
         </article>
+
+        <!-- 2 ▸ linki (Next .js 14) -->
+        <article class="project-card">
+          <a href="https://github.com/Gurcz1/linki"
+             target="_blank" rel="noopener">
+            <img src="https://opengraph.githubassets.com/1/Gurcz1/linki"
+                 alt="Podgląd repozytorium linki na GitHubie"
+                 width="600" height="314"
+                 loading="lazy" decoding="async">
+          </a>
+          <h3>Linki – bio-link w Next .js 14</h3>
+          <p>Minimalistyczna aplikacja w Next.js (App Router, TypeScript, Tailwind),
+             która pozwala zbudować stronę „jedno bio – wiele odnośników”.
+             Gotowa do szybkiego deployu na Vercel.</p>
+          <a class="btn-mini"
+             href="https://github.com/Gurcz1/linki"
+             target="_blank" rel="noopener">Repozytorium</a>
+        </article>
+
       </div>
     </section>
 
@@ -112,13 +129,6 @@
   <footer class="footer" role="contentinfo">
     © <span id="year"></span> Jakub Fabian
   </footer>
-
-  <!--  Service Worker (prosty)  -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
-    }
-  </script>
 
   <script src="script.js"></script>
 </body>

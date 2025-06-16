@@ -5,77 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Jakub Fabian – Portfolio</title>
-  <meta name="description" content="Portfolio Jakuba Fabiana – projekty programistyczne i kontakt." />
+  <meta name="description" content="Portfolio Jakuba Fabiana – projekty programistyczne i kontakt.">
 
-  <!-- Google Fonts (Inter 400 / 600 / 700) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'" />
+        rel="stylesheet" media="print" onload="this.media='all'">
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-          rel="stylesheet" />
+          rel="stylesheet">
   </noscript>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
 
-  <!-- ░░ HEADER ░░ -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <nav class="nav-links" aria-label="Główna">
       <ul>
-        <li><a href="#about"    data-i18n="nav.about"></a></li>
-        <li><a href="#projects" data-i18n="nav.projects"></a></li>
-        <li><a href="#contact"  data-i18n="nav.contact"></a></li>
+        <li><a href="#about"    data-i18n="nav.about">O mnie</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
+        <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
-  <!-- ░░ HERO / ABOUT ░░ -->
+  <!-- HERO / ABOUT -->
   <section id="about" class="hero" aria-labelledby="hero-heading">
     <div class="hero__content">
       <h2 id="hero-heading" class="tagline" data-i18n="tagline"></h2>
       <h1 class="headline" data-i18n="headline"></h1>
-      <p class="intro"   data-i18n="intro"></p>
+      <p  class="intro"   data-i18n="intro"></p>
       <a href="#projects" class="btn cta" data-i18n="cta"
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
     <!-- Ikony (desktop) -->
     <nav class="socials" aria-label="Moje profile">
-      <a href="https://github.com/jakubfabian" aria-label="GitHub – zobacz mój kod">
+      <a href="https://github.com/jakubfabian" aria-label="GitHub">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">GitHub</span>
       </a>
-      <a href="https://twitter.com/jakubfabian" aria-label="X / Twitter – śledź mnie">
+      <a href="https://twitter.com/jakubfabian" aria-label="X / Twitter">
         <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">X</span>
       </a>
-      <a href="https://instagram.com/jakubfabian" aria-label="Instagram – moje zdjęcia">
+      <a href="https://instagram.com/jakubfabian" aria-label="Instagram">
         <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Instagram</span>
       </a>
-      <a href="mailto:jakub@example.com" aria-label="Wyślij mi e-mail">
+      <a href="mailto:jakub@example.com" aria-label="Mail">
         <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Mail</span>
       </a>
     </nav>
   </section>
 
-  <!-- ░░ PROJECTS ░░ -->
+  <!-- PROJECTS -->
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
-      <p data-i18n="projects.subtitle"></p>
+      <p  data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- Projekt 1 -->
         <article class="project-card">
           <img src="img/mealplanner.webp"
                alt="Zrzut ekranu AI Meal Planner"
@@ -85,7 +84,6 @@
           <p data-i18n="projects.example"></p>
         </article>
 
-        <!-- Projekt 2 – linki -->
         <article class="project-card">
           <a href="https://github.com/Gurcz1/linki" target="_blank" rel="noopener">
             <img src="https://opengraph.githubassets.com/1/Gurcz1/linki"
@@ -97,30 +95,25 @@
           <h3>linki – bio-link w Next.js 14</h3>
 
           <p>Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę
-             z przyciskami do wybranych serwisów (YouTube, Instagram, Gmail,
-             LinkedIn, własne strony).</p>
+             z przyciskami do wybranych serwisów.</p>
 
           <ul class="feature-list">
-            <li>Dodawanie dowolnej liczby linków</li>
-            <li>Etykieta, kolor i ikona do wyboru</li>
-            <li>Możliwość wgrania własnej ikony</li>
-            <li>Edycja i przeciąganie w dowolnej kolejności</li>
-            <li>Dane zapisywane lokalnie – bez logowania</li>
+            <li>Dowolna liczba linków</li>
+            <li>Etykiety, kolory, ikony</li>
+            <li>Własne ikony i drag-&-drop</li>
+            <li>Dane lokalnie — bez logowania</li>
           </ul>
 
-          <p>Idealne jako osobista strona startowa, bio-link
-             lub panel szybkiego dostępu.</p>
+          <p>Idealne jako bio-link lub panel szybkiego dostępu.</p>
 
-          <a class="btn-mini"
-             href="https://github.com/Gurcz1/linki"
-             target="_blank" rel="noopener">
-             Repozytorium
+          <a class="btn-mini" href="https://github.com/Gurcz1/linki" target="_blank">
+            Repozytorium
           </a>
         </article>
       </div>
     </section>
 
-    <!-- ░░ CONTACT ░░ -->
+    <!-- CONTACT -->
     <section id="contact" class="section alt" aria-labelledby="contact-heading">
       <h2 id="contact-heading" data-i18n="contact.title"></h2>
       <p>Email: <a href="mailto:jakub@example.com">jakub@example.com</a></p>
@@ -128,24 +121,16 @@
     </section>
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     © <span id="year"></span> Jakub Fabian
 
     <!-- Ikony (mobile) -->
     <nav class="socials-footer" aria-label="Moje profile">
-      <a href="https://github.com/jakubfabian" aria-label="GitHub">
-        <img src="icons/github.svg" alt="" aria-hidden="true">
-      </a>
-      <a href="https://twitter.com/jakubfabian" aria-label="X / Twitter">
-        <img src="icons/x.svg" alt="" aria-hidden="true">
-      </a>
-      <a href="https://instagram.com/jakubfabian" aria-label="Instagram">
-        <img src="icons/instagram.svg" alt="" aria-hidden="true">
-      </a>
-      <a href="mailto:jakub@example.com" aria-label="Mail">
-        <img src="icons/mail.svg" alt="" aria-hidden="true">
-      </a>
+      <a href="https://github.com/jakubfabian" aria-label="GitHub"><img src="icons/github.svg" alt=""></a>
+      <a href="https://twitter.com/jakubfabian" aria-label="X"><img src="icons/x.svg" alt=""></a>
+      <a href="https://instagram.com/jakubfabian" aria-label="Instagram"><img src="icons/instagram.svg" alt=""></a>
+      <a href="mailto:jakub@example.com" aria-label="Mail"><img src="icons/mail.svg" alt=""></a>
     </nav>
   </footer>
 

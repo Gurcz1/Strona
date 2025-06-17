@@ -1,37 +1,36 @@
-/* ───────── i18n słowniki ───────── */
-const dict = {
-  pl: {
-    'nav.about':'O mnie',
-    'nav.projects':'Projekty',
-    'nav.contact':'Kontakt',
-
+/* ---------- SŁOWNIKI ---------- */
+const dict={
+  pl:{
+    /* NAV & HERO */
+    'nav.about':'O mnie','nav.projects':'Projekty','nav.contact':'Kontakt',
     tagline:'CIEKAWY ROZWOJU SPORTOWIEC-STUDENT',
     headline:'Cześć, jestem Jakub —\nwszechstronny i zawsze chętny na coś nowego.',
     intro:'Programista, pasjonat sportu i ciągłego rozwoju.',
     cta:'Zobacz projekty',
 
+    /* PROJEKTY */
     'projects.title':'Projekty',
     'projects.subtitle':'Ostatnie rzeczy, nad którymi pracowałem:',
 
     'linki.desc':'Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę z przyciskami do wybranych serwisów.',
-    'linki.f1':'Dowolna liczba linków',
-    'linki.f2':'Etykiety, kolory, ikony',
-    'linki.f3':'Własne ikony i drag-&-drop',
-    'linki.f4':'Dane lokalnie – bez logowania',
+    'linki.f1':'Dowolna liczba linków','linki.f2':'Etykiety, kolory, ikony',
+    'linki.f3':'Własne ikony i drag-&-drop','linki.f4':'Dane lokalnie – bez logowania',
     'linki.btn':'Repozytorium',
 
-    'contact.title':'Kontakt',
-    'contact.note':'Chętnie odpowiem na Twoją wiadomość!',
+    'soon.img':'Wkrótce','soon.title':'Projekt w przygotowaniu',
+    'soon.desc':'Kolejna aplikacja pojawi się tutaj niedługo – zaglądaj!',
+    'soon.f1':'Responsywny UI','soon.f2':'Nowoczesny stack','soon.f3':'Otwarte API',
+    'soon.btn':'Wkrótce',
+
+    /* CONTACT */
+    'contact.title':'Kontakt','contact.note':'Chętnie odpowiem na Twoją wiadomość!',
     title:'Jakub Góralski – Programista & Sportowiec'
   },
 
-  en: {
-    'nav.about':'About',
-    'nav.projects':'Projects',
-    'nav.contact':'Contact',
-
+  en:{
+    'nav.about':'About','nav.projects':'Projects','nav.contact':'Contact',
     tagline:'CURIOUS GROWTH-DRIVEN ATHLETE-SCHOLAR',
-    headline:`Hi, I'm Jakub –\nversatile and always up for something new.`,
+    headline:"Hi, I'm Jakub —\nversatile and always up for something new.",
     intro:'Developer, sports enthusiast and lifelong learner.',
     cta:'See projects',
 
@@ -39,58 +38,48 @@ const dict = {
     'projects.subtitle':'Here are a few things I’ve been working on:',
 
     'linki.desc':'A simple “link hub” app that lets you build a sleek page with buttons to any services you choose.',
-    'linki.f1':'Unlimited number of links',
-    'linki.f2':'Custom labels, colors & icons',
-    'linki.f3':'Upload icons & drag-and-drop order',
-    'linki.f4':'Data stored locally – no login',
+    'linki.f1':'Unlimited number of links','linki.f2':'Custom labels, colors & icons',
+    'linki.f3':'Upload icons & drag-and-drop order','linki.f4':'Data stored locally – no login',
     'linki.btn':'View repository',
 
-    'contact.title':'Contact',
-    'contact.note':'Feel free to drop me a message!',
+    'soon.img':'Coming soon','soon.title':'Project in progress',
+    'soon.desc':'A brand-new app will land here soon – stay tuned!',
+    'soon.f1':'Responsive UI','soon.f2':'Modern stack','soon.f3':'Open API',
+    'soon.btn':'Coming soon',
+
+    'contact.title':'Contact','contact.note':'Feel free to drop me a message!',
     title:'Jakub Góralski – Developer & Athlete'
   }
 };
 
-let currentLang = 'pl';
-const toggleBtn = document.getElementById('lang-toggle');
+/* -------- I18N LOGIKA -------- */
+let currentLang='pl';
+const toggle=document.getElementById('lang-toggle');
 
-/* ───── zmiana języka ───── */
 function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.dataset.i18n;
-    if(dict[lang][key]) el.textContent = dict[lang][key];
+    const k=el.dataset.i18n;
+    if(dict[lang][k]) el.textContent=dict[lang][k];
   });
-
-  document.title = dict[lang].title;
-  document.documentElement.lang = lang;
-
-  if(lang==='pl'){
-    toggleBtn.textContent = 'EN';
-    toggleBtn.setAttribute('aria-label','Change language to English');
-  }else{
-    toggleBtn.textContent = 'PL';
-    toggleBtn.setAttribute('aria-label','Zmień język na polski');
-  }
-  currentLang = lang;
+  document.title=dict[lang].title;
+  document.documentElement.lang=lang;
+  toggle.textContent=lang==='pl'?'EN':'PL';
+  toggle.setAttribute('aria-label',lang==='pl'?'Change language to English':'Zmień język na polski');
+  currentLang=lang;
 }
-
-/* ───── obsługa kliknięcia ───── */
-toggleBtn.addEventListener('click', ()=>applyLang(currentLang==='pl'?'en':'pl'));
-
-/* ───── init ───── */
+toggle.addEventListener('click',()=>applyLang(currentLang==='pl'?'en':'pl'));
 applyLang('pl');
-document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ───────── Scroll-spy ───────── */
-const sections = [...document.querySelectorAll('section[id]')];
-const navLinks = [...document.querySelectorAll('.nav-links a')];
+/* rok w stopce */
+document.getElementById('year').textContent=new Date().getFullYear();
 
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    const id   = entry.target.id;
-    const link = navLinks.find(a=>a.getAttribute('href')==='#'+id);
-    if(link) link.classList.toggle('active', entry.isIntersecting);
+/* -------- Scroll-spy -------- */
+const sections=[...document.querySelectorAll('section[id]')];
+const navLinks=[...document.querySelectorAll('.nav-links a')];
+const spy=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    const link=navLinks.find(a=>a.getAttribute('href')==='#'+e.target.id);
+    if(link) link.classList.toggle('active',e.isIntersecting);
   });
 },{rootMargin:'-40% 0px -45% 0px'});
-
-sections.forEach(sec=>observer.observe(sec));
+sections.forEach(s=>spy.observe(s));

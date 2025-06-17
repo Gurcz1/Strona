@@ -48,7 +48,7 @@
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!-- Social (desktop + mobile) -->
+    <!-- SOCIAL -->
     <nav class="socials" aria-label="Moje profile">
       <a href="https://github.com/Gurcz1" aria-label="GitHub">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
@@ -73,33 +73,34 @@
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
-      <p data-i18n="projects.subtitle"></p>
+      <p  data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- ▶ jedyny projekt -->
         <article class="project-card">
           <a href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener">
             <img class="project-thumb"
-                 src="img/linki.png"        
+                 src="img/linki.png"
                  alt="Zrzut ekranu aplikacji MyLaunchpad"
                  loading="lazy" decoding="async">
           </a>
 
-          <h3>MyLaunchpad</h3>
+          <div class="project-content">
+            <h3>MyLaunchpad</h3>
 
-          <p data-i18n="linki.desc"></p>
+            <p data-i18n="linki.desc"></p>
 
-          <ul class="feature-list">
-            <li data-i18n="linki.f1"></li>
-            <li data-i18n="linki.f2"></li>
-            <li data-i18n="linki.f3"></li>
-            <li data-i18n="linki.f4"></li>
-          </ul>
+            <ul class="feature-list">
+              <li data-i18n="linki.f1"></li>
+              <li data-i18n="linki.f2"></li>
+              <li data-i18n="linki.f3"></li>
+              <li data-i18n="linki.f4"></li>
+            </ul>
 
-          <a class="btn-mini"
-             href="https://github.com/Gurcz1/linki"
-             target="_blank" rel="noopener"
-             data-i18n="linki.btn">Repozytorium</a>
+            <a class="btn-mini"
+               href="https://github.com/Gurcz1/linki"
+               target="_blank" rel="noopener"
+               data-i18n="linki.btn">Repozytorium</a>
+          </div>
         </article>
       </div>
     </section>

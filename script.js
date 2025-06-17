@@ -14,7 +14,7 @@ const dict={
 
     'linki.desc':'Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę z przyciskami do wybranych serwisów.',
     'linki.f1':'Dowolna liczba linków','linki.f2':'Etykiety, kolory, ikony',
-    'linki.f3':'Własne ikony i drag-&-drop','linki.f4':'Dane lokalnie – bez logowania',
+    'linki.f3':'Drag-&-drop','linki.f4':'Dane lokalnie – bez logowania',
     'linki.btn':'Repozytorium',
 
     'soon.img':'Wkrótce','soon.title':'Projekt w przygotowaniu',
@@ -39,7 +39,7 @@ const dict={
 
     'linki.desc':'A simple “link hub” app that lets you build a sleek page with buttons to any services you choose.',
     'linki.f1':'Unlimited number of links','linki.f2':'Custom labels, colors & icons',
-    'linki.f3':'Upload icons & drag-and-drop order','linki.f4':'Data stored locally – no login',
+    'linki.f3':'Drag-and-drop order','linki.f4':'Data stored locally – no login',
     'linki.btn':'View repository',
 
     'soon.img':'Coming soon','soon.title':'Project in progress',

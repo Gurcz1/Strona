@@ -103,3 +103,11 @@ a:focus-visible,button:focus-visible,.btn:focus-visible,.btn-mini:focus-visible{
   .nav-links ul{gap:18px;}
   .icon-circle{width:56px;height:56px;}
 }
+
+.project-thumb{
+  width:100%;         
+  height:auto;         
+  max-height:240px;    
+  object-fit:cover;   
+  border-radius:12px; 
+}

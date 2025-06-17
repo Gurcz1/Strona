@@ -14,10 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-          rel="stylesheet">
-  </noscript>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+                  rel="stylesheet"></noscript>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -47,24 +45,11 @@
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!-- Social -->
     <nav class="socials" aria-label="Moje profile">
-      <a href="https://github.com/Gurcz1" aria-label="GitHub">
-        <div class="icon-circle"><img src="icons/github.svg" alt=""></div>
-        <span class="icon-label">GitHub</span>
-      </a>
-      <a href="https://x.com/home" aria-label="X">
-        <div class="icon-circle"><img src="icons/x.svg" alt=""></div>
-        <span class="icon-label">X</span>
-      </a>
-      <a href="https://www.instagram.com/gurczii/" aria-label="Instagram">
-        <div class="icon-circle"><img src="icons/instagram.svg" alt=""></div>
-        <span class="icon-label">Instagram</span>
-      </a>
-      <a href="mailto:kubagural0@gmail.com" aria-label="Mail">
-        <div class="icon-circle"><img src="icons/mail.svg" alt=""></div>
-        <span class="icon-label">Mail</span>
-      </a>
+      <a href="https://github.com/Gurcz1"          aria-label="GitHub"><div class="icon-circle"><img src="icons/github.svg" alt=""></div><span class="icon-label">GitHub</span></a>
+      <a href="https://x.com/home"                 aria-label="X"><div class="icon-circle"><img src="icons/x.svg" alt=""></div><span class="icon-label">X</span></a>
+      <a href="https://www.instagram.com/gurczii/" aria-label="Instagram"><div class="icon-circle"><img src="icons/instagram.svg" alt=""></div><span class="icon-label">Instagram</span></a>
+      <a href="mailto:kubagural0@gmail.com"        aria-label="Mail"><div class="icon-circle"><img src="icons/mail.svg" alt=""></div><span class="icon-label">Mail</span></a>
     </nav>
   </section>
 
@@ -75,35 +60,49 @@
       <p  data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- ── karta projektu ── -->
+
+        <!-- ◎ MyLaunchpad -->
         <article class="project-card">
-          <!-- miniatura -->
           <a href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener">
-            <img class="project-thumb"
-                 src="img/linki.png"  <!-- zmień na icons/linki.png jeśli tam leży -->
+            <img class="project-thumb" src="img/linki.png"
                  alt="Zrzut ekranu aplikacji MyLaunchpad"
                  loading="lazy" decoding="async">
           </a>
-
-          <!-- treść -->
           <div class="project-content">
             <h3>MyLaunchpad</h3>
-
             <p data-i18n="linki.desc"></p>
-
             <ul class="feature-list">
               <li data-i18n="linki.f1"></li>
               <li data-i18n="linki.f2"></li>
               <li data-i18n="linki.f3"></li>
               <li data-i18n="linki.f4"></li>
             </ul>
-
-            <a class="btn-mini"
-               href="https://github.com/Gurcz1/linki"
-               target="_blank" rel="noopener"
-               data-i18n="linki.btn">Repozytorium</a>
+            <a class="btn-mini" href="https://github.com/Gurcz1/linki"
+               target="_blank" rel="noopener" data-i18n="linki.btn">Repozytorium</a>
           </div>
         </article>
+
+        <!-- ◎ RestaurantPOS -->
+        <article class="project-card">
+          <a href="https://restaurant-pos-demo.vercel.app/" target="_blank" rel="noopener">
+            <img class="project-thumb" src="img/restaurant.png"
+                 alt="Zrzut ekranu systemu RestaurantPOS"
+                 loading="lazy" decoding="async">
+          </a>
+          <div class="project-content">
+            <h3>RestaurantPOS</h3>
+            <p data-i18n="pos.desc"></p>
+            <ul class="feature-list">
+              <li data-i18n="pos.f1"></li>
+              <li data-i18n="pos.f2"></li>
+              <li data-i18n="pos.f3"></li>
+              <li data-i18n="pos.f4"></li>
+            </ul>
+            <a class="btn-mini" href="https://github.com/Gurcz1/restaurant-pos"
+               target="_blank" rel="noopener" data-i18n="pos.btn">Repozytorium</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -119,10 +118,10 @@
   <footer class="footer" role="contentinfo">
     © <span id="year"></span> Jakub Góralski
     <nav class="socials-footer" aria-label="Moje profile">
-      <a href="https://github.com/Gurcz1" aria-label="GitHub"><img src="icons/github.svg" alt=""></a>
-      <a href="https://x.com/home"        aria-label="X"><img src="icons/x.svg" alt=""></a>
+      <a href="https://github.com/Gurcz1"          aria-label="GitHub"><img src="icons/github.svg" alt=""></a>
+      <a href="https://x.com/home"                 aria-label="X"><img src="icons/x.svg" alt=""></a>
       <a href="https://www.instagram.com/gurczii/" aria-label="Instagram"><img src="icons/instagram.svg" alt=""></a>
-      <a href="mailto:kubagural0@gmail.com" aria-label="Mail"><img src="icons/mail.svg" alt=""></a>
+      <a href="mailto:kubagural0@gmail.com"        aria-label="Mail"><img src="icons/mail.svg" alt=""></a>
     </nav>
   </footer>
 

@@ -87,3 +87,14 @@ body{
   cursor:pointer;
 }
 #lang-toggle:focus-visible{outline:3px solid #ffd92f;outline-offset:4px;}
+
+/* --- miniatura projektu (16:9) --- */
+.project-thumb{
+  width:100%;                /* 200 px szer. kolumny */
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* Placeholder „Coming soon” – zostaje bez zmian */
+.project-thumb.placeholder{ /* …jak w Twoim pliku… */ }

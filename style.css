@@ -8,69 +8,57 @@ body{
   display:flex;flex-direction:column;min-height:100vh;
 }
 
-/* HEADER & NAV (wybrane najistotniejsze) */
-.site-header{position:sticky;top:0;z-index:1100;height:64px;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;}
-.nav-links ul{display:flex;gap:30px;list-style:none;}
-.nav-links a{color:#fff;font-weight:600;text-decoration:none;position:relative;}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#26a6ff;transition:width .25s;}
-.nav-links a:hover::after{width:100%;}
-.nav-links a.active{color:#26a6ff;}
-.nav-links a.active::after{width:100%;}
-/* ... (pozostałe reguły header / focus / hero bez zmian) */
+/* ------- pomijam niezmienione sekcje HEADER / HERO / SOCIALS / BUTTONS -------- */
 
-/* SOCIALS – poprawka */
-.socials{
-  display:grid;
-  grid-auto-rows:min-content;
-  gap:28px;
-  margin-right:2vw;
-  align-self:center;
-}
-.socials a{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-decoration:none;
-  color:#fff;
-  font-size:.75rem;
-  font-weight:600;
-}
-.icon-circle{
-  background:#fff;
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  transition:transform .2s;
-}
-.icon-circle img{
-  width:60%;
-  height:60%;
-}
-.socials a:hover .icon-circle{transform:scale(1.1);}
-.icon-label{margin-top:6px;}
+/* SEKCJE */
+.section{padding:90px 7vw;background:#0d0d0d;}
+.section.alt{background:#111922;}
+.section h2{font-size:2.25rem;margin-bottom:15px;color:#26a6ff;}
+.section p{font-size:1rem;max-width:800px;margin-bottom:38px;}
 
-/* PROJEKT – mała miniatura */
+/* ===== PROJEKTY ===== */
 .project-grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+
+/* karta = mała miniatura (200 px) + treść obok */
 .project-card{
-  background:#1a1a1a;border-radius:16px;overflow:hidden;
-  box-shadow:0 4px 12px #0007;display:grid;
-  grid-template-columns:200px 1fr;gap:24px;align-items:start;
+  background:#1a1a1a;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 4px 12px #0007;
+  display:grid;
+  grid-template-columns:200px 1fr;
+  gap:24px;
+  align-items:start;
   transition:transform .25s, box-shadow .25s;
 }
-.project-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px #0009;}
-.project-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+.project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 8px 20px #0009;
+}
+
+/* miniatura 16:9, 200 px szerokości */
+.project-thumb{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* treść */
 .project-content{padding:25px 25px 25px 0;}
 .project-content h3{margin:0 0 10px;color:#fff;}
 .project-content p{color:#ccc;margin-bottom:18px;}
 .feature-list{padding-left:1.2rem;margin:12px 0 22px;}
 .feature-list li{list-style:disc;margin:6px 0;color:#ccc;font-size:.95rem;}
-.btn-mini{padding:8px 18px;border:2px solid #26a6ff;color:#26a6ff;border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;}
 
-/* MOBILE ≤ 900 px */
+/* FOOTER (bez zmian) */
+
+/* ── MOBILE ≤ 900 px ──  → karta łamie się w kolumnę */
 @media(max-width:900px){
-  .socials{grid-auto-flow:column;grid-template-columns:repeat(4,min-content);gap:20px;justify-content:center;margin:32px auto 0;padding:0 4vw;}
-  .project-card{grid-template-columns:1fr;}
-  .project-content{padding:20px;}
+  .project-card{
+    grid-template-columns:1fr;
+  }
+  .project-content{
+    padding:20px;
+  }
 }

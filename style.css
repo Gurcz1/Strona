@@ -91,9 +91,27 @@ body{
 .btn.cta:hover{background:#1c86e6;color:#fff;}
 
 .btn-mini{
-  display:inline-block;padding:8px 18px;
-  border:2px solid #26a6ff;color:#26a6ff;
-  border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;
+  padding:8px 18px;
+  border:2px solid #26a6ff;
+  color:#26a6ff;
+  border-radius:6px;
+  font-size:.9rem;
+  font-weight:600;
+  text-decoration:none;
+  transition:background .2s,color .2s,transform .2s;  
+}
+
+
+.btn-mini:not(.disabled):hover{
+  background:#26a6ff;         
+  color:#000;                 
+  transform:translateY(-2px);  
+}
+
+
+.btn-mini.disabled{
+  opacity:.5;
+  cursor:not-allowed;
 }
 .btn-mini.disabled{opacity:.5;cursor:not-allowed;}
 

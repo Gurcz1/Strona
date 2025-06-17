@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Jakub Góralski – Portfolio</title>
   <meta name="description"
         content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
@@ -47,21 +48,21 @@
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!-- social (desktop + mobile) -->
+    <!-- Social (desktop + mobile) -->
     <nav class="socials" aria-label="Moje profile">
-      <a href="https://github.com/Gurcz1"            aria-label="GitHub">
+      <a href="https://github.com/Gurcz1" aria-label="GitHub">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">GitHub</span>
       </a>
-      <a href="https://x.com/home"                   aria-label="X">
+      <a href="https://x.com/home" aria-label="X">
         <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">X</span>
       </a>
-      <a href="https://www.instagram.com/gurczii/"   aria-label="Instagram">
+      <a href="https://www.instagram.com/gurczii/" aria-label="Instagram">
         <div class="icon-circle"><img src="icons/instagram.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Instagram</span>
       </a>
-      <a href="mailto:kubagural0@gmail.com"          aria-label="Mail">
+      <a href="mailto:kubagural0@gmail.com" aria-label="Mail">
         <div class="icon-circle"><img src="icons/mail.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">Mail</span>
       </a>
@@ -72,14 +73,15 @@
   <main id="main">
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <h2 id="projects-heading" data-i18n="projects.title"></h2>
-      <p  data-i18n="projects.subtitle"></p>
+      <p data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
         <!-- ▶ jedyny projekt -->
         <article class="project-card">
           <a href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener">
-            <img src="img/linki.png"     <!--  ←  ŚCIEŻKA:  img/linki.png  -->
-                 alt="Zrzut ekranu aplikacji link-hub"
+            <img class="project-thumb"
+                 src="img/linki.png"          <!-- jeśli plik jest w icons/, zmień ścieżkę -->
+                 alt="Zrzut ekranu aplikacji MyLaunchpad"
                  loading="lazy" decoding="async">
           </a>
 
@@ -114,10 +116,10 @@
   <footer class="footer" role="contentinfo">
     © <span id="year"></span> Jakub Góralski
     <nav class="socials-footer" aria-label="Moje profile">
-      <a href="https://github.com/Gurcz1"            aria-label="GitHub"><img src="icons/github.svg"     alt=""></a>
-      <a href="https://x.com/home"                   aria-label="X"><img     src="icons/x.svg"          alt=""></a>
-      <a href="https://www.instagram.com/gurczii/"   aria-label="Instagram"><img src="icons/instagram.svg" alt=""></a>
-      <a href="mailto:kubagural0@gmail.com"          aria-label="Mail"><img   src="icons/mail.svg"       alt=""></a>
+      <a href="https://github.com/Gurcz1" aria-label="GitHub"><img src="icons/github.svg" alt=""></a>
+      <a href="https://x.com/home"        aria-label="X"><img src="icons/x.svg" alt=""></a>
+      <a href="https://www.instagram.com/gurczii/" aria-label="Instagram"><img src="icons/instagram.svg" alt=""></a>
+      <a href="mailto:kubagural0@gmail.com" aria-label="Mail"><img src="icons/mail.svg" alt=""></a>
     </nav>
   </footer>
 

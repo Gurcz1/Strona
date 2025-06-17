@@ -75,3 +75,15 @@ body{
   .project-card{grid-template-columns:1fr;}
   .project-content{padding:20px;}
 }
+
+/* LANG-TOGGLE – kapsułka jak wcześniej */
+#lang-toggle{
+  background:#ffffff22;   /* pół-transparentne tło */
+  border:2px solid #fff;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+}
+#lang-toggle:focus-visible{outline:3px solid #ffd92f;outline-offset:4px;}

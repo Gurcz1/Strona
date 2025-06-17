@@ -1,6 +1,7 @@
 /* ───────── i18n słowniki ───────── */
 const dict = {
   pl: {
+    /* NAV & HERO */
     'nav.about':'O mnie',
     'nav.projects':'Projekty',
     'nav.contact':'Kontakt',
@@ -10,9 +11,11 @@ const dict = {
     intro:'Programista, pasjonat sportu i ciągłego rozwoju.',
     cta:'Zobacz projekty',
 
+    /* SEKCJA PROJEKTY */
     'projects.title':'Projekty',
     'projects.subtitle':'Ostatnie rzeczy, nad którymi pracowałem:',
 
+    /* ─ MyLaunchpad (linki) ─ */
     'linki.desc':'Prosta aplikacja „link hub”, która pozwala stworzyć elegancką stronę z przyciskami do wybranych serwisów.',
     'linki.f1':'Dowolna liczba linków',
     'linki.f2':'Etykiety, kolory, ikony',
@@ -20,24 +23,38 @@ const dict = {
     'linki.f4':'Dane lokalnie – bez logowania',
     'linki.btn':'Repozytorium',
 
+    /* ─ RestaurantPOS ─ */
+    'pos.desc':'System POS dla restauracji: obsługa zamówień, stolików i płatności w jednym miejscu.',
+    'pos.f1':'Zamówienia w czasie rzeczywistym',
+    'pos.f2':'Panel kelnera i kuchni',
+    'pos.f3':'Integracja płatności online',
+    'pos.f4':'Statystyki sprzedaży',
+    'pos.btn':'Repozytorium',
+
+    /* CONTACT */
     'contact.title':'Kontakt',
     'contact.note':'Chętnie odpowiem na Twoją wiadomość!',
+
+    /* <title> */
     title:'Jakub Góralski – Programista & Sportowiec'
   },
 
   en: {
+    /* NAV & HERO */
     'nav.about':'About',
     'nav.projects':'Projects',
     'nav.contact':'Contact',
 
     tagline:'CURIOUS GROWTH-DRIVEN ATHLETE-SCHOLAR',
-    headline:`Hi, I'm Jakub –\nversatile and always up for something new.`,
+    headline:`Hi, I'm Jakub —\nversatile and always up for something new.`,
     intro:'Developer, sports enthusiast and lifelong learner.',
     cta:'See projects',
 
+    /* PROJECTS SECTION */
     'projects.title':'Projects',
     'projects.subtitle':'Here are a few things I’ve been working on:',
 
+    /* ─ MyLaunchpad (linki) ─ */
     'linki.desc':'A simple “link hub” app that lets you build a sleek page with buttons to any services you choose.',
     'linki.f1':'Unlimited number of links',
     'linki.f2':'Custom labels, colors & icons',
@@ -45,16 +62,28 @@ const dict = {
     'linki.f4':'Data stored locally – no login',
     'linki.btn':'View repository',
 
+    /* ─ RestaurantPOS ─ */
+    'pos.desc':'Restaurant POS system: orders, tables and payments in one dashboard.',
+    'pos.f1':'Real-time order tracking',
+    'pos.f2':'Waiter & kitchen panels',
+    'pos.f3':'Online payment integration',
+    'pos.f4':'Sales analytics',
+    'pos.btn':'View repository',
+
+    /* CONTACT */
     'contact.title':'Contact',
     'contact.note':'Feel free to drop me a message!',
+
+    /* <title> */
     title:'Jakub Góralski – Developer & Athlete'
   }
 };
 
+/* ───────── zmienne ───────── */
 let currentLang = 'pl';
 const toggleBtn = document.getElementById('lang-toggle');
 
-/* ───── zmiana języka ───── */
+/* ───────── zmiana języka ───────── */
 function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.dataset.i18n;
@@ -64,7 +93,7 @@ function applyLang(lang){
   document.title = dict[lang].title;
   document.documentElement.lang = lang;
 
-  if(lang==='pl'){
+  if(lang === 'pl'){
     toggleBtn.textContent = 'EN';
     toggleBtn.setAttribute('aria-label','Change language to English');
   }else{
@@ -74,10 +103,11 @@ function applyLang(lang){
   currentLang = lang;
 }
 
-/* ───── obsługa kliknięcia ───── */
-toggleBtn.addEventListener('click', ()=>applyLang(currentLang==='pl'?'en':'pl'));
+/* ───────── event przycisku ───────── */
+toggleBtn.addEventListener('click', () =>
+  applyLang(currentLang === 'pl' ? 'en' : 'pl'));
 
-/* ───── init ───── */
+/* ───────── init ───────── */
 applyLang('pl');
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -88,9 +118,9 @@ const navLinks = [...document.querySelectorAll('.nav-links a')];
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     const id   = entry.target.id;
-    const link = navLinks.find(a=>a.getAttribute('href')==='#'+id);
+    const link = navLinks.find(a => a.getAttribute('href') === '#'+id);
     if(link) link.classList.toggle('active', entry.isIntersecting);
   });
-},{rootMargin:'-40% 0px -45% 0px'});
+}, { rootMargin:'-40% 0px -45% 0px' });
 
-sections.forEach(sec=>observer.observe(sec));
+sections.forEach(sec => observer.observe(sec));

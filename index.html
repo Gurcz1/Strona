@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Jakub Góralski – Portfolio</title>
   <meta name="description"
         content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
@@ -48,13 +47,13 @@
          aria-label="Przejdź do sekcji Projekty"></a>
     </div>
 
-    <!-- Social (desktop + mobile) -->
+    <!-- social (desktop + mobile) -->
     <nav class="socials" aria-label="Moje profile">
       <a href="https://github.com/Gurcz1"            aria-label="GitHub">
         <div class="icon-circle"><img src="icons/github.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">GitHub</span>
       </a>
-      <a href="https://x.com/home"                   aria-label="X / Twitter">
+      <a href="https://x.com/home"                   aria-label="X">
         <div class="icon-circle"><img src="icons/x.svg" alt="" aria-hidden="true"></div>
         <span class="icon-label">X</span>
       </a>
@@ -76,12 +75,14 @@
       <p  data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- Jedyny projekt -->
+        <!-- ▶ jedyny projekt -->
         <article class="project-card">
           <a href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener">
-              <img src="icons/linki.jpg" width="600" height="314"
-                   alt="Zrzut ekranu aplikacji link-hub"
-                   loading="lazy" decoding="async">
+            <!-- • masz tylko jeden plik PNG → używamy go bez <picture> -->
+            <img src="img/linki.png"     <!--  ←  ŚCIEŻKA:  img/linki.png  -->
+                 width="600" height="314"
+                 alt="Zrzut ekranu aplikacji link-hub"
+                 loading="lazy" decoding="async">
           </a>
 
           <h3>MyLaunchpad</h3>

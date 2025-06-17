@@ -62,3 +62,14 @@ body{
     padding:20px;
   }
 }
+
+.icon-circle{
+  width:64px;
+  height:64px;
+  display:grid;
+  place-items:center;
+}
+.icon-circle img{
+  width:60%;
+  height:60%;
+}

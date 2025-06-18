@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jakub Góralski – Portfolio</title>
-  <meta name="description" content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
+  <meta name="description"
+        content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
 
+  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,11 +21,13 @@
 
   <!-- ░░ HEADER ░░ -->
   <header class="site-header">
-    <nav class="nav-links"><ul>
-      <li><a href="#about"    data-i18n="nav.about">O mnie</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
-      <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
-    </ul></nav>
+    <nav class="nav-links" aria-label="Główna">
+      <ul>
+        <li><a href="#about"    data-i18n="nav.about">O mnie</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
+        <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+    </nav>
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
@@ -35,12 +40,23 @@
       <a href="#projects" class="btn cta" data-i18n="cta"></a>
     </div>
 
-    <!-- social -->
     <nav class="socials" aria-label="Moje profile">
-      <a href="https://github.com/Gurcz1"><div class="icon-circle"><img src="icons/github.svg" alt=""></div><span class="icon-label">GitHub</span></a>
-      <a href="https://x.com/home"><div class="icon-circle"><img src="icons/x.svg" alt=""></div><span class="icon-label">X</span></a>
-      <a href="https://www.instagram.com/gurczii/"><div class="icon-circle"><img src="icons/instagram.svg" alt=""></div><span class="icon-label">Instagram</span></a>
-      <a href="mailto:kubagural0@gmail.com"><div class="icon-circle"><img src="icons/mail.svg" alt=""></div><span class="icon-label">Mail</span></a>
+      <a href="https://github.com/Gurcz1" aria-label="GitHub">
+        <div class="icon-circle"><img src="icons/github.svg" alt=""></div>
+        <span class="icon-label">GitHub</span>
+      </a>
+      <a href="https://x.com/home" aria-label="X">
+        <div class="icon-circle"><img src="icons/x.svg" alt=""></div>
+        <span class="icon-label">X</span>
+      </a>
+      <a href="https://www.instagram.com/gurczii/" aria-label="Instagram">
+        <div class="icon-circle"><img src="icons/instagram.svg" alt=""></div>
+        <span class="icon-label">Instagram</span>
+      </a>
+      <a href="mailto:kubagural0@gmail.com" aria-label="Mail">
+        <div class="icon-circle"><img src="icons/mail.svg" alt=""></div>
+        <span class="icon-label">Mail</span>
+      </a>
     </nav>
   </section>
 
@@ -51,10 +67,15 @@
       <p  data-i18n="projects.subtitle"></p>
 
       <div class="project-grid">
-        <!-- MyLaunchpad -->
+
+        <!-- ◎ MyLaunchpad (statyczny screen) -->
         <article class="project-card">
-          <img class="project-thumb" src="img/linki.png"
-               alt="Zrzut ekranu aplikacji MyLaunchpad" loading="lazy">
+          <a href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener">
+            <img class="project-thumb"
+                 src="img/linki.png"
+                 alt="Zrzut ekranu aplikacji MyLaunchpad"
+                 loading="lazy" decoding="async">
+          </a>
 
           <div class="project-content">
             <h3>MyLaunchpad</h3>
@@ -65,31 +86,32 @@
               <li data-i18n="linki.f3"></li>
               <li data-i18n="linki.f4"></li>
             </ul>
-
-            <div class="btn-wrap">
-              <a class="btn-mini demo"
-                 href="https://linki-sigma.vercel.app/"
-                 target="_blank" rel="noopener"
-                 data-i18n="linki.demo">Demo</a>
-
-              <a class="btn-mini"
-                 href="https://github.com/Gurcz1/linki"
-                 target="_blank" rel="noopener"
-                 data-i18n="linki.btn">Repozytorium</a>
-            </div>
+            <a class="btn-mini"
+               href="https://github.com/Gurcz1/linki"
+               target="_blank" rel="noopener"
+               data-i18n="linki.btn">Repozytorium</a>
           </div>
         </article>
 
-        <!-- Wkrótce -->
+        <!-- ◎ Wkrótce -->
         <article class="project-card">
-          <div class="project-thumb placeholder" aria-hidden="true"><span data-i18n="soon.img">Wkrótce</span></div>
+          <div class="project-thumb placeholder" aria-hidden="true">
+            <span data-i18n="soon.img">Wkrótce</span>
+          </div>
           <div class="project-content">
-            <h3 data-i18n="soon.title"></h3>
+            <h3 data-i18n="soon.title">Nowy projekt</h3>
             <p  data-i18n="soon.desc"></p>
-            <ul class="feature-list"><li data-i18n="soon.f1"></li><li data-i18n="soon.f2"></li><li data-i18n="soon.f3"></li></ul>
-            <button class="btn-mini disabled" disabled data-i18n="soon.btn">Wkrótce</button>
+            <ul class="feature-list">
+              <li data-i18n="soon.f1"></li>
+              <li data-i18n="soon.f2"></li>
+              <li data-i18n="soon.f3"></li>
+            </ul>
+            <button class="btn-mini disabled" disabled data-i18n="soon.btn">
+              Wkrótce
+            </button>
           </div>
         </article>
+
       </div>
     </section>
 
@@ -101,7 +123,11 @@
     </section>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Jakub Góralski</footer>
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    © <span id="year"></span> Jakub Góralski
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

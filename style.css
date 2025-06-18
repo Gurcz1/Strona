@@ -58,11 +58,10 @@ body{
 .intro{font-size:1.25rem;line-height:1.5;margin-bottom:35px;text-shadow:0 2px 4px #000;}
 
 /* ───── BUTTONS ───── */
-.btn{
-  display:inline-block;padding:12px 28px;border:2px solid #26a6ff;
-  color:#26a6ff;border-radius:8px;font-weight:600;text-decoration:none;
-}
+.btn{display:inline-block;padding:12px 28px;border:2px solid #26a6ff;
+     color:#26a6ff;border-radius:8px;font-weight:600;text-decoration:none;}
 .btn.cta{background:#26a6ff;color:#000;}
+
 .btn-mini{
   padding:8px 18px;border:2px solid #26a6ff;color:#26a6ff;
   border-radius:6px;font-size:.9rem;font-weight:600;text-decoration:none;
@@ -81,10 +80,8 @@ body{
   display:grid;grid-auto-rows:min-content;gap:28px;
   margin-right:2vw;align-self:center;
 }
-.socials a{
-  display:flex;flex-direction:column;align-items:center;
-  text-decoration:none;color:#fff;font-size:.75rem;font-weight:600;
-}
+.socials a{display:flex;flex-direction:column;align-items:center;
+           text-decoration:none;color:#fff;font-size:.75rem;font-weight:600;}
 .icon-circle{
   background:#fff;width:64px;height:64px;border-radius:50%;
   display:grid;place-items:center;transition:transform .2s;
@@ -99,39 +96,36 @@ body{
 .section h2{font-size:2.25rem;margin-bottom:15px;color:#26a6ff;}
 .section p{font-size:1rem;max-width:800px;margin-bottom:38px;}
 
-/* ───── PROJECTS (2 karty w rzędzie) ───── */
+/* ───── PROJECTS (pionowe karty) ───── */
 .project-grid{
-  display:grid;
-  gap:30px;
-  grid-template-columns:repeat(2,1fr);      /* STAŁE 2 kolumny */
+  display:grid;gap:30px;
+  grid-template-columns:repeat(2,minmax(0,1fr)); /* zawsze 2 */
 }
-
 .project-card{
   background:#1a1a1a;border-radius:16px;box-shadow:0 4px 12px #0007;
-  display:grid;grid-template-columns:320px 1fr;gap:24px;
-  overflow:hidden;
-  transition:transform .25s,box-shadow .25s;
+  display:flex;flex-direction:column;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;min-height:100%;
 }
 .project-card:hover{transform:translateY(-6px);box-shadow:0 8px 20px #0009;}
 
-.project-thumb{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
+.project-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
 .project-thumb.placeholder{
-  height:100%;
-  background:#222 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' rx='12' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23888' font-family='Inter' font-size='34' text-anchor='middle' dominant-baseline='middle'%3EComing%20Soon%3C/text%3E%3C/svg%3E") center/60% no-repeat;
-  display:grid;place-items:center;color:#888;font-weight:600;
+  background:#181818;position:relative;color:#999;font-weight:600;
 }
-.project-thumb.placeholder span{display:none;}
+.project-thumb.placeholder::before{
+  content:'';position:absolute;inset:10px;border:2px dashed #555;border-radius:12px;
+}
+.project-thumb.placeholder::after{
+  content:'Coming Soon';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);font-size:1rem;color:#777;
+}
 
-.project-content{padding:25px 25px 25px 0;}
-.project-content h3{margin:0 0 10px;color:#fff;}
-.project-content p{color:#ccc;margin-bottom:18px;}
-.feature-list{padding-left:1.2rem;margin:12px 0 22px;}
+.project-content{padding:24px;display:flex;flex-direction:column;flex:1;}
+.project-content h3{margin:0 0 12px;font-size:1.25rem;color:#fff;}
+.project-content p{color:#ccc;margin-bottom:16px;}
+.feature-list{padding-left:1.2rem;margin:0 0 20px;}
 .feature-list li{list-style:disc;margin:6px 0;color:#ccc;font-size:.95rem;}
+.project-card .btn-wrap{margin-top:auto;}
 
 /* ───── FOOTER ───── */
 .footer{text-align:center;padding:25px 0;background:#000;font-size:.875rem;color:#888;}
@@ -152,10 +146,5 @@ body{
     margin:32px auto 0;padding:0 4vw;
   }
 
-  .project-grid{grid-template-columns:1fr;}  /* 1 karta w kolumnie */
-  .project-card{grid-template-columns:1fr;}
-  .project-thumb{
-    width:100%;height:auto;aspect-ratio:16/9;
-  }
-  .project-content{padding:20px;}
+  .project-grid{grid-template-columns:1fr;}   /* 1 karta w kolumnie */
 }

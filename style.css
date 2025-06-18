@@ -158,3 +158,19 @@ body{
   }
   .project-content{padding:20px;}
 }
+
+/* ► kontener na przyciski repo/demo */
+.btn-wrap{display:flex;gap:14px;flex-wrap:wrap;}
+
+/* odróżniamy „Demo” niebieskim wypełnieniem */
+.btn-mini.demo{
+  background:#26a6ff;
+  color:#000;
+  border-color:#26a6ff;
+}
+.btn-mini.demo:hover{
+  background:#1c86e6;
+  border-color:#1c86e6;
+  color:#fff;
+}
+

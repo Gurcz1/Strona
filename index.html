@@ -2,26 +2,32 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jakub Góralski – Portfolio</title>
-  <meta name="description" content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
+  <meta name="description"
+        content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
 
+  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <a href="#main" class="skip-link">Przejdź do treści</a>
 
   <!-- ░░ HEADER ░░ -->
   <header class="site-header">
-    <nav class="nav-links"><ul>
-      <li><a href="#about"    data-i18n="nav.about">O mnie</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
-      <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
-    </ul></nav>
+    <nav class="nav-links" aria-label="Główna">
+      <ul>
+        <li><a href="#about"    data-i18n="nav.about">O mnie</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projekty</a></li>
+        <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+    </nav>
     <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
   </header>
 
@@ -52,47 +58,71 @@
 
         <!-- ◎ MyLaunchpad -->
         <article class="project-card">
-          <img class="project-thumb" src="img/linki.png" alt="MyLaunchpad screenshot" loading="lazy">
+          <img class="project-thumb" src="img/linki.png"
+               alt="Zrzut ekranu aplikacji MyLaunchpad" loading="lazy">
           <div class="project-content">
             <h3>MyLaunchpad</h3>
             <p data-i18n="linki.desc"></p>
             <ul class="feature-list">
-              <li data-i18n="linki.f1"></li><li data-i18n="linki.f2"></li>
-              <li data-i18n="linki.f3"></li><li data-i18n="linki.f4"></li>
+              <li data-i18n="linki.f1"></li>
+              <li data-i18n="linki.f2"></li>
+              <li data-i18n="linki.f3"></li>
+              <li data-i18n="linki.f4"></li>
             </ul>
             <div class="btn-wrap">
-              <a class="btn-mini demo" href="https://linki-sigma.vercel.app/" target="_blank" rel="noopener" data-i18n="linki.demo">Demo</a>
-              <a class="btn-mini" href="https://github.com/Gurcz1/linki" target="_blank" rel="noopener" data-i18n="linki.btn">Repozytorium</a>
+              <a class="btn-mini demo"
+                 href="https://linki-sigma.vercel.app/"
+                 target="_blank" rel="noopener"
+                 data-i18n="linki.demo">Demo</a>
+              <a class="btn-mini"
+                 href="https://github.com/Gurcz1/linki"
+                 target="_blank" rel="noopener"
+                 data-i18n="linki.btn">Repozytorium</a>
             </div>
           </div>
         </article>
 
-        <!-- ◎ FlowPanel – NOWA KARTA -->
+        <!-- ◎ FlowPanel -->
         <article class="project-card">
-          <img class="project-thumb" src="img/flowpanel.png" alt="FlowPanel screenshot" loading="lazy">
+          <img class="project-thumb" src="img/flowpanel.png"
+               alt="Zrzut ekranu systemu FlowPanel" loading="lazy">
           <div class="project-content">
             <h3>FlowPanel</h3>
             <p data-i18n="flow.desc"></p>
             <ul class="feature-list">
-              <li data-i18n="flow.f1"></li><li data-i18n="flow.f2"></li>
-              <li data-i18n="flow.f3"></li><li data-i18n="flow.f4"></li>
+              <li data-i18n="flow.f1"></li>
+              <li data-i18n="flow.f2"></li>
+              <li data-i18n="flow.f3"></li>
+              <li data-i18n="flow.f4"></li>
               <li data-i18n="flow.f5"></li>
             </ul>
             <div class="btn-wrap">
-              <a class="btn-mini demo" href="https://projekt-eta-beige.vercel.app/" target="_blank" rel="noopener" data-i18n="flow.demo">Demo</a>
-              <a class="btn-mini" href="https://github.com/Gurcz1/Projekt" target="_blank" rel="noopener" data-i18n="flow.btn">Repozytorium</a>
+              <a class="btn-mini demo"
+                 href="https://projekt-eta-beige.vercel.app/"
+                 target="_blank" rel="noopener"
+                 data-i18n="flow.demo">Demo</a>
+              <a class="btn-mini"
+                 href="https://github.com/Gurcz1/Projekt"
+                 target="_blank" rel="noopener"
+                 data-i18n="flow.btn">Repozytorium</a>
             </div>
           </div>
         </article>
 
         <!-- ◎ Placeholder -->
         <article class="project-card">
-          <div class="project-thumb placeholder" aria-hidden="true"><span data-i18n="soon.img"></span></div>
+          <div class="project-thumb placeholder" aria-hidden="true">
+            <span data-i18n="soon.img"></span>
+          </div>
           <div class="project-content">
             <h3 data-i18n="soon.title"></h3>
             <p  data-i18n="soon.desc"></p>
-            <ul class="feature-list"><li data-i18n="soon.f1"></li><li data-i18n="soon.f2"></li><li data-i18n="soon.f3"></li></ul>
-            <button class="btn-mini disabled" disabled data-i18n="soon.btn"></button>
+            <ul class="feature-list">
+              <li data-i18n="soon.f1"></li>
+              <li data-i18n="soon.f2"></li>
+              <li data-i18n="soon.f3"></li>
+            </ul>
+            <button class="btn-mini disabled" disabled data-i18n="soon.btn">Wkrótce</button>
           </div>
         </article>
 
@@ -107,7 +137,11 @@
     </section>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Jakub Góralski</footer>
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    © <span id="year"></span> Jakub Góralski
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

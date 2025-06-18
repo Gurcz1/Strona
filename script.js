@@ -18,6 +18,15 @@ const dict={
     'linki.btn':'Repozytorium',
     'linki.demo':'Demo',
 
+    'flow.desc':'System zarządzania procesem obsługi, który koordynuje zamówienia i przepływ informacji.',
+    'flow.f1':'Panel pracownika – zamówienia, kategorie',
+    'flow.f2':'Widok realizatora – statusy, kolejki',
+    'flow.f3':'Panel administratora – dane, raporty',
+    'flow.f4':'Działa lokalnie, bez logowania',
+    'flow.f5':'Łatwy do wdrożenia (Firebase, Supabase)',
+    'flow.btn':'Repozytorium',
+    'flow.demo':'Demo',
+
     'soon.img':'Wkrótce','soon.title':'Projekt w przygotowaniu',
     'soon.desc':'Kolejna aplikacja pojawi się tutaj niedługo – zaglądaj!',
     'soon.f1':'Responsywny UI','soon.f2':'Nowoczesny stack','soon.f3':'Otwarte API',
@@ -42,7 +51,16 @@ const dict={
     'linki.f1':'Unlimited number of links','linki.f2':'Custom labels, colors & icons',
     'linki.f3':'Drag-and-drop order','linki.f4':'Data stored locally – no login',
     'linki.btn':'View repository',
-    'linki.demo':'Live demo', 
+    'linki.demo':'Live demo',
+    
+    'flow.desc':'A workflow management system coordinating orders, tasks and information flow between teams.',
+    'flow.f1':'Employee portal – orders & categories',
+    'flow.f2':'Executor view – statuses & queues',
+    'flow.f3':'Admin panel – data & reports',
+    'flow.f4':'Runs locally, no login',
+    'flow.f5':'Easy to deploy with DB (Firebase, Supabase)',
+    'flow.btn':'View repository',
+    'flow.demo':'Live demo',
 
     'soon.img':'Coming soon','soon.title':'Project in progress',
     'soon.desc':'A brand-new app will land here soon – stay tuned!',

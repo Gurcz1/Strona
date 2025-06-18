@@ -25,6 +25,8 @@ const dict={
     /* CONTACT */
     'contact.title':'Kontakt','contact.note':'Chętnie odpowiem na Twoją wiadomość!',
     title:'Jakub Góralski – Programista & Sportowiec'
+
+    dict.pl['linki.demo'] = 'Demo';
   },
 
   en:{
@@ -49,6 +51,8 @@ const dict={
 
     'contact.title':'Contact','contact.note':'Feel free to drop me a message!',
     title:'Jakub Góralski – Developer & Athlete'
+
+    dict.en['linki.demo'] = 'Live demo';
   }
 };
 

@@ -16,6 +16,7 @@ const dict={
     'linki.f1':'Dowolna liczba linków','linki.f2':'Etykiety, kolory, ikony',
     'linki.f3':'Drag-&-drop','linki.f4':'Dane lokalnie – bez logowania',
     'linki.btn':'Repozytorium',
+    'linki.demo':'Demo',
 
     'soon.img':'Wkrótce','soon.title':'Projekt w przygotowaniu',
     'soon.desc':'Kolejna aplikacja pojawi się tutaj niedługo – zaglądaj!',
@@ -41,6 +42,7 @@ const dict={
     'linki.f1':'Unlimited number of links','linki.f2':'Custom labels, colors & icons',
     'linki.f3':'Drag-and-drop order','linki.f4':'Data stored locally – no login',
     'linki.btn':'View repository',
+    'linki.demo':'Live demo', 
 
     'soon.img':'Coming soon','soon.title':'Project in progress',
     'soon.desc':'A brand-new app will land here soon – stay tuned!',

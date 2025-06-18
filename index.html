@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Jakub Góralski – Portfolio</title>
   <meta name="description"
         content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
@@ -10,9 +10,7 @@
   <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,6 +31,7 @@
 
   <!-- ░░ HERO ░░ -->
   <section id="about" class="hero">
+    <div class="hero__overlay"></div>
     <div class="hero__content">
       <h2 class="tagline"  data-i18n="tagline"></h2>
       <h1 class="headline" data-i18n="headline"></h1>
@@ -40,10 +39,11 @@
       <a href="#projects" class="btn cta" data-i18n="cta"></a>
     </div>
 
+    <!-- social desktop -->
     <nav class="socials" aria-label="Moje profile">
       <a href="https://github.com/Gurcz1"><div class="icon-circle"><img src="icons/github.svg" alt=""></div><span class="icon-label">GitHub</span></a>
       <a href="https://x.com/home"><div class="icon-circle"><img src="icons/x.svg" alt=""></div><span class="icon-label">X</span></a>
-      <a href="https://www.instagram.com/gurczii/"><div class="icon-circle"><img src="icons/instagram.svg" alt=""></div><span class="icon-label">Instagram</span></a>
+      <a href="https://www.instagram.com/gurczii/"><div class="icon-circle"><img src="icons/instagram.svg" alt=""></div><span class="icon-label">IG</span></a>
       <a href="mailto:kubagural0@gmail.com"><div class="icon-circle"><img src="icons/mail.svg" alt=""></div><span class="icon-label">Mail</span></a>
     </nav>
   </section>
@@ -56,7 +56,7 @@
 
       <div class="project-grid">
 
-        <!-- ◎ MyLaunchpad -->
+        <!-- MyLaunchpad -->
         <article class="project-card">
           <img class="project-thumb" src="img/linki.png"
                alt="Zrzut ekranu aplikacji MyLaunchpad" loading="lazy">
@@ -64,25 +64,19 @@
             <h3>MyLaunchpad</h3>
             <p data-i18n="linki.desc"></p>
             <ul class="feature-list">
-              <li data-i18n="linki.f1"></li>
-              <li data-i18n="linki.f2"></li>
-              <li data-i18n="linki.f3"></li>
-              <li data-i18n="linki.f4"></li>
+              <li data-i18n="linki.f1"></li><li data-i18n="linki.f2"></li>
+              <li data-i18n="linki.f3"></li><li data-i18n="linki.f4"></li>
             </ul>
             <div class="btn-wrap">
-              <a class="btn-mini demo"
-                 href="https://linki-sigma.vercel.app/"
-                 target="_blank" rel="noopener"
-                 data-i18n="linki.demo">Demo</a>
-              <a class="btn-mini"
-                 href="https://github.com/Gurcz1/linki"
-                 target="_blank" rel="noopener"
-                 data-i18n="linki.btn">Repozytorium</a>
+              <a class="btn-mini demo" href="https://linki-sigma.vercel.app/"
+                 target="_blank" rel="noopener" data-i18n="linki.demo">Demo</a>
+              <a class="btn-mini" href="https://github.com/Gurcz1/linki"
+                 target="_blank" rel="noopener" data-i18n="linki.btn">Repozytorium</a>
             </div>
           </div>
         </article>
 
-        <!-- ◎ FlowPanel -->
+        <!-- FlowPanel -->
         <article class="project-card">
           <img class="project-thumb" src="img/flowpanel.png"
                alt="Zrzut ekranu systemu FlowPanel" loading="lazy">
@@ -90,39 +84,30 @@
             <h3>FlowPanel</h3>
             <p data-i18n="flow.desc"></p>
             <ul class="feature-list">
-              <li data-i18n="flow.f1"></li>
-              <li data-i18n="flow.f2"></li>
-              <li data-i18n="flow.f3"></li>
-              <li data-i18n="flow.f4"></li>
+              <li data-i18n="flow.f1"></li><li data-i18n="flow.f2"></li>
+              <li data-i18n="flow.f3"></li><li data-i18n="flow.f4"></li>
               <li data-i18n="flow.f5"></li>
             </ul>
             <div class="btn-wrap">
-              <a class="btn-mini demo"
-                 href="https://projekt-eta-beige.vercel.app/"
-                 target="_blank" rel="noopener"
-                 data-i18n="flow.demo">Demo</a>
-              <a class="btn-mini"
-                 href="https://github.com/Gurcz1/Projekt"
-                 target="_blank" rel="noopener"
-                 data-i18n="flow.btn">Repozytorium</a>
+              <a class="btn-mini demo" href="https://projekt-eta-beige.vercel.app/"
+                 target="_blank" rel="noopener" data-i18n="flow.demo">Demo</a>
+              <a class="btn-mini" href="https://github.com/Gurcz1/Projekt"
+                 target="_blank" rel="noopener" data-i18n="flow.btn">Repozytorium</a>
             </div>
           </div>
         </article>
 
-        <!-- ◎ Placeholder -->
+        <!-- Coming soon -->
         <article class="project-card">
           <div class="project-thumb placeholder" aria-hidden="true">
-            <span data-i18n="soon.img"></span>
+            <span>🚧 Coming&nbsp;Soon</span>
           </div>
           <div class="project-content">
             <h3 data-i18n="soon.title"></h3>
             <p  data-i18n="soon.desc"></p>
-            <ul class="feature-list">
-              <li data-i18n="soon.f1"></li>
-              <li data-i18n="soon.f2"></li>
-              <li data-i18n="soon.f3"></li>
-            </ul>
-            <button class="btn-mini disabled" disabled data-i18n="soon.btn">Wkrótce</button>
+            <ul class="feature-list"><li data-i18n="soon.f1"></li><li data-i18n="soon.f2"></li><li data-i18n="soon.f3"></li></ul>
+            <button class="btn-mini disabled" aria-disabled="true"
+                    disabled data-i18n="soon.btn">Wkrótce</button>
           </div>
         </article>
 
@@ -132,12 +117,28 @@
     <!-- ░░ CONTACT ░░ -->
     <section id="contact" class="section alt">
       <h2 data-i18n="contact.title"></h2>
-      <p>Email: <a href="mailto:kubagural0@gmail.com">kubagural0@gmail.com</a></p>
+
+      <!-- prosty Formspree -->
+      <form class="contact-form" action="https://formspree.io/f/yourID" method="POST">
+        <label>
+          <span data-i18n="contact.name">Imię</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span data-i18n="contact.email">Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span data-i18n="contact.msg">Wiadomość</span>
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn cta" type="submit" data-i18n="contact.send">Wyślij</button>
+      </form>
+
       <p data-i18n="contact.note"></p>
     </section>
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
   <footer class="footer">
     © <span id="year"></span> Jakub Góralski
   </footer>

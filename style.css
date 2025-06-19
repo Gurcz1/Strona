@@ -40,7 +40,7 @@ body{
 .hero{
   position:relative;               /* — overlay potrzebuje kontekstu — */
   min-height:calc(100vh - 64px);
-  display:grid;grid-template-columns:1fr auto;
+  display:grid;grid-template-columns:1fr;
   align-items:center;gap:40px;
   padding:calc(64px + 60px) 7vw 80px;
 }

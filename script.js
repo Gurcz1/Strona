@@ -3,11 +3,10 @@ const dict={
   pl:{
     /* NAV & HERO */
     'nav.about':'O mnie','nav.projects':'Projekty','nav.contact':'Kontakt',
-    tagline:'FULLSTACK DEVELOPER • SPORTOWIEC • CIĄGLE UCZĘ SIĘ NOWYCH RZECZY',
-    headline:'Cześć! Jestem Jakub 👋\nTworzę nowoczesne aplikacje webowe z pasją.',
-    intro:'Programista z Polski 🇵🇱 specjalizujący się w React i Node.js. Pasjonat sportu, który kod traktuje jak trening — ciągłe doskonalenie i przekraczanie granic. Obecnie dostępny na nowe projekty!',
-    cta:'Zobacz moje projekty',
-    'tech.label':'Stack technologiczny:',
+    tagline:'CIEKAWY ROZWOJU SPORTOWIEC-STUDENT',
+    headline:'Cześć, jestem Jakub —\nwszechstronny i zawsze chętny na coś nowego.',
+    intro:'Programista, pasjonat sportu i ciągłego rozwoju.',
+    cta:'Zobacz projekty',
 
     /* PROJEKTY */
     'projects.title':'Projekty',
@@ -40,11 +39,10 @@ const dict={
 
   en:{
     'nav.about':'About','nav.projects':'Projects','nav.contact':'Contact',
-    tagline:'FULLSTACK DEVELOPER • ATHLETE • ALWAYS LEARNING SOMETHING NEW',
-    headline:"Hey there! I'm Jakub 👋\nBuilding modern web apps with passion.",
-    intro:'Developer from Poland 🇵🇱 specializing in React & Node.js. Sports enthusiast who treats code like training — constant improvement and pushing boundaries. Currently available for new projects!',
-    cta:'View my projects',
-    'tech.label':'Tech Stack:',
+    tagline:'CURIOUS GROWTH-DRIVEN ATHLETE-SCHOLAR',
+    headline:"Hi, I'm Jakub —\nversatile and always up for something new.",
+    intro:'Developer, sports enthusiast and lifelong learner.',
+    cta:'See projects',
 
     'projects.title':'Projects',
     'projects.subtitle':'Here are a few things I’ve been working on:',

@@ -3,15 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO Meta Tags -->
   <title>Jakub Góralski – Portfolio</title>
-  <meta name="description"
-        content="Portfolio Jakuba Góralskiego – projekty programistyczne i kontakt.">
+  <meta name="description" content="Portfolio Jakuba Góralskiego – fullstack developer z Polski specjalizujący się w React i Node.js. Zobacz moje projekty i skontaktuj się ze mną.">
+  <meta name="keywords" content="Jakub Góralski, fullstack developer, React, Node.js, TypeScript, Next.js, Firebase, portfolio, programista, developer">
+  <meta name="author" content="Jakub Góralski">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jakubgoralski.dev/">
+  <meta property="og:title" content="Jakub Góralski – Fullstack Developer">
+  <meta property="og:description" content="Fullstack developer z Polski specjalizujący się w React i Node.js. Sprawdź moje projekty i poznaj moje umiejętności.">
+  <meta property="og:image" content="https://jakubgoralski.dev/img/og-image.jpg">
+  <meta property="og:locale" content="pl_PL">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://jakubgoralski.dev/">
+  <meta property="twitter:title" content="Jakub Góralski – Fullstack Developer">
+  <meta property="twitter:description" content="Fullstack developer z Polski specjalizujący się w React i Node.js. Sprawdź moje projekty i poznaj moje umiejętności.">
+  <meta property="twitter:image" content="https://jakubgoralski.dev/img/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#26a6ff">
 
-  <!-- Inter -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jakub Góralski",
+    "jobTitle": "Fullstack Developer",
+    "url": "https://jakubgoralski.dev",
+    "email": "kubagural0@gmail.com",
+    "nationality": "Polish",
+    "knowsAbout": ["React", "Node.js", "TypeScript", "Next.js", "Firebase", "JavaScript", "Web Development"],
+    "sameAs": [
+      "https://github.com/Gurcz1",
+      "https://x.com/home",
+      "https://www.instagram.com/gurczii/"
+    ]
+  }
+  </script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,7 +73,10 @@
         <li><a href="#contact"  data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
-    <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
+    <div class="header-controls">
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <button id="lang-toggle" aria-label="Zmień język na angielski">EN</button>
+    </div>
   </header>
 
   <!-- ░░ HERO ░░ -->
@@ -75,14 +123,24 @@
           <img class="project-thumb" src="img/linki.png"
                alt="Zrzut ekranu aplikacji MyLaunchpad" loading="lazy">
           <div class="project-content">
-            <h3>MyLaunchpad</h3>
+            <div class="project-header">
+              <h3>MyLaunchpad</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
             <p data-i18n="linki.desc"></p>
-            <ul class="feature-list">
-              <li data-i18n="linki.f1"></li>
-              <li data-i18n="linki.f2"></li>
-              <li data-i18n="linki.f3"></li>
-              <li data-i18n="linki.f4"></li>
-            </ul>
+            <div class="project-details">
+              <h4 data-i18n="features.title">Funkcje:</h4>
+              <ul class="feature-list">
+                <li data-i18n="linki.f1"></li>
+                <li data-i18n="linki.f2"></li>
+                <li data-i18n="linki.f3"></li>
+                <li data-i18n="linki.f4"></li>
+              </ul>
+            </div>
             <div class="btn-wrap">
               <a class="btn-mini demo"
                  href="https://linki-sigma.vercel.app/"
@@ -101,15 +159,25 @@
           <img class="project-thumb" src="img/flowpanel.png"
                alt="Zrzut ekranu systemu FlowPanel" loading="lazy">
           <div class="project-content">
-            <h3>FlowPanel</h3>
+            <div class="project-header">
+              <h3>FlowPanel</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+            </div>
             <p data-i18n="flow.desc"></p>
-            <ul class="feature-list">
-              <li data-i18n="flow.f1"></li>
-              <li data-i18n="flow.f2"></li>
-              <li data-i18n="flow.f3"></li>
-              <li data-i18n="flow.f4"></li>
-              <li data-i18n="flow.f5"></li>
-            </ul>
+            <div class="project-details">
+              <h4 data-i18n="features.title">Funkcje:</h4>
+              <ul class="feature-list">
+                <li data-i18n="flow.f1"></li>
+                <li data-i18n="flow.f2"></li>
+                <li data-i18n="flow.f3"></li>
+                <li data-i18n="flow.f4"></li>
+                <li data-i18n="flow.f5"></li>
+              </ul>
+            </div>
             <div class="btn-wrap">
               <a class="btn-mini demo"
                  href="https://projekt-eta-beige.vercel.app/"
@@ -129,14 +197,26 @@
             <span data-i18n="soon.img"></span>
           </div>
           <div class="project-content">
-            <h3 data-i18n="soon.title"></h3>
-            <p  data-i18n="soon.desc"></p>
-            <ul class="feature-list">
-              <li data-i18n="soon.f1"></li>
-              <li data-i18n="soon.f2"></li>
-              <li data-i18n="soon.f3"></li>
-            </ul>
-            <button class="btn-mini disabled" disabled data-i18n="soon.btn">Wkrótce</button>
+            <div class="project-header">
+              <h3 data-i18n="soon.title"></h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">API</span>
+              </div>
+            </div>
+            <p data-i18n="soon.desc"></p>
+            <div class="project-details">
+              <h4 data-i18n="features.title">Planowane funkcje:</h4>
+              <ul class="feature-list">
+                <li data-i18n="soon.f1"></li>
+                <li data-i18n="soon.f2"></li>
+                <li data-i18n="soon.f3"></li>
+              </ul>
+            </div>
+            <div class="btn-wrap">
+              <button class="btn-mini disabled" disabled data-i18n="soon.btn">Wkrótce</button>
+            </div>
           </div>
         </article>
 
